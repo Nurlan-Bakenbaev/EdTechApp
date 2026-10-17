@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Pear</title>
+  <path fill="none" stroke="#795332" stroke-linecap="round" stroke-width="8" d="M64 34c1-10 5-17 12-21"/>
+  <path fill="#42a568" stroke="#286847" stroke-linejoin="round" stroke-width="4" d="M75 23c8-11 20-12 28-7-4 12-14 18-28 14"/>
+  <path fill="#9bcf55" stroke="#628d38" stroke-linejoin="round" stroke-width="5" d="M62 39c-4 15-14 23-24 35-18 22-10 45 4 51 13 6 17-1 22-1s9 7 22 1c14-6 22-29 4-51C80 62 70 54 66 39c-.6-5-3.4-5-4 0Z"/>
+  <path fill="#fff" opacity=".72" d="M35 87c2-10 9-17 17-20-7 11-9 24-5 36-9-2-14-7-12-16Z"/>
+</svg>

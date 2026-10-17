@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "@/components/icon";
+import { FruitIllustration } from "@/components/fruit-illustration";
 import { useLanguage } from "@/app/providers";
 import type { LessonSlot } from "@/lib/curriculum";
 import { getLessonGuide } from "@/lib/lesson-guide";
@@ -25,6 +26,10 @@ export function LessonGuideStage({
     : ["Смотри", "Делаем вместе", "Твой ход"];
 
   function renderVisual(isQuestion = false) {
+    if (guide.fruitGroups) {
+      return <FruitIllustration groups={guide.fruitGroups} language={language} />;
+    }
+
     if (slot.topic.family === "spatial") {
       const vertical = isQuestion && /над|above/i.test(guide.prompt[language]);
       return (

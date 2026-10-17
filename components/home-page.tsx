@@ -87,7 +87,7 @@ export function HomePage() {
             <div className="math-bubble bubble-one">7 + 5</div>
             <div className="math-bubble bubble-two">△ ○ □</div>
             <div className="mascot-glow" />
-            <Image className="hero-mascot" src="/assets/zhyldyz-mentor.png" alt="" width={1120} height={1374} loading="eager" />
+            <Image className="hero-mascot" src="/assets/zhyldyz-mentor.png" alt="" width={1120} height={1374} sizes="(max-width: 520px) 360px, (max-width: 1024px) 420px, 500px" loading="eager" />
             <div className="mentor-card">
               <span className="mentor-avatar"><Icon name="sparkle" size={17} /></span>
               <div><strong>{t(language, "Жылдыз рядом", "Жылдыз жаныңда")}</strong><span>{t(language, "Подскажет следующий шаг", "Кийинки кадамды көрсөтөт")}</span></div>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Orange</title>
+  <path fill="#49a96e" stroke="#286847" stroke-linejoin="round" stroke-width="4" d="M64 25c8-16 24-17 35-12-4 16-17 23-34 21"/>
+  <path fill="none" stroke="#795332" stroke-linecap="round" stroke-width="7" d="M64 33V22"/>
+  <circle cx="64" cy="69" r="46" fill="#ff9c36" stroke="#c86a25" stroke-width="5"/>
+  <circle cx="64" cy="69" r="34" fill="none" stroke="#ffc26b" stroke-width="3" stroke-dasharray="3 8"/>
+  <path fill="#fff0cf" opacity=".8" d="M32 59c4-12 14-19 25-19-12 10-17 23-15 38-9-3-13-10-10-19Z"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Strawberry</title>
+  <path fill="#49a96e" stroke="#286847" stroke-linejoin="round" stroke-width="4" d="M64 45c-9-18-30-17-38-9 12 15 24 18 38 16-8 14-2 20 0 20s8-6 0-20c14 2 26-1 38-16-8-8-29-9-38 9Z"/>
+  <path fill="#f25563" stroke="#aa3648" stroke-linejoin="round" stroke-width="5" d="M64 48c-13-15-46-10-46 13 0 24 29 53 46 60 17-7 46-36 46-60 0-23-33-28-46-13Z"/>
+  <g fill="#ffe59a"><ellipse cx="43" cy="67" rx="3" ry="5"/><ellipse cx="64" cy="65" rx="3" ry="5"/><ellipse cx="84" cy="68" rx="3" ry="5"/><ellipse cx="52" cy="88" rx="3" ry="5"/><ellipse cx="75" cy="89" rx="3" ry="5"/><ellipse cx="63" cy="107" rx="3" ry="5"/></g>
+</svg>

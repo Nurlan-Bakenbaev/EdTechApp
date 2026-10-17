@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Friendly hedgehog mascot</title>
+  <circle cx="64" cy="67" r="57" fill="#ffe6d9"/>
+  <path fill="#845940" stroke="#61412f" stroke-linejoin="round" stroke-width="3" d="m17 82-9-15 18 3-12-20 22 9-6-22 22 18 3-25 17 23 12-23 9 28 20-15-7 26 20-3-13 20c-13 22-76 27-96-4Z"/>
+  <path fill="#edbd91" stroke="#9d6c4b" stroke-width="3" d="M19 82c5-23 21-39 46-39 22 0 38 16 43 38 3 13-7 28-20 32-18 5-42 1-57-8-11-6-15-13-12-23Z"/>
+  <ellipse cx="57" cy="75" rx="4" ry="6" fill="#403633"/><ellipse cx="88" cy="75" rx="4" ry="6" fill="#403633"/>
+  <ellipse cx="103" cy="88" rx="7" ry="5" fill="#634737"/>
+  <path d="M54 94q8 8 17 1" fill="none" stroke="#80573f" stroke-linecap="round" stroke-width="3"/>
+  <circle cx="48" cy="89" r="5" fill="#ee9c91"/><circle cx="82" cy="89" r="5" fill="#ee9c91"/>
+</svg>

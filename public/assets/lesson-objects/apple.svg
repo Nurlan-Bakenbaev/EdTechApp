@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Apple</title>
+  <path fill="#42a568" stroke="#286847" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M64 25c9-17 25-17 34-12-3 15-15 23-34 21"/>
+  <path fill="none" stroke="#795332" stroke-linecap="round" stroke-width="8" d="M64 35V22"/>
+  <path fill="#f25f61" stroke="#a83d4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M64 43c-17-13-43-3-48 20-7 32 17 58 38 56 5 0 8-3 10-3s5 3 10 3c21 2 45-24 38-56-5-23-31-33-48-20Z"/>
+  <path fill="#fff" opacity=".8" d="M31 71c3-11 10-17 19-18-9 9-13 22-12 34-6-3-9-9-7-16Z"/>
+</svg>

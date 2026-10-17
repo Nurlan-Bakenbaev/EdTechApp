@@ -42,6 +42,8 @@ npm.cmd run build
 
 - responsive landing page, class selector, child dashboard, curriculum explorer and lesson routes;
 - Russian and Kyrgyz UI switcher;
+- reusable SVG fruit illustrations in `public/assets/lesson-objects/` (including apples and pears shown in data-comparison practice);
+- six selectable illustrated math-helper mascots on parent registration, saved as a validated `mascot_id` account preference;
 - all 33 Grade 1 topic rows/96 hours and 25 Grade 2 rows/132 hours;
 - 228 navigable lesson-hour routes with six deterministic tasks each;
 - a four-phase Lesson Engine for the first Grade 1 lesson, with adaptive practice, a 10-question independent test, six homework activities and resumable local checkpoints;

@@ -1,4 +1,6 @@
 import type { LessonSlot, TopicFamily } from "@/lib/curriculum";
+import type { FruitGroup } from "@/lib/practice";
+import { createPracticeTasks, hasTopicSpecificPractice, topicObjective } from "@/lib/practice";
 
 export type LessonLanguageText = { ru: string; ky: string };
 
@@ -9,6 +11,7 @@ export interface LessonGuideOption {
 
 export interface LessonGuide {
   visual: string;
+  fruitGroups?: FruitGroup[];
   steps: LessonLanguageText[];
   example: LessonLanguageText;
   prompt: LessonLanguageText;
@@ -142,7 +145,11 @@ const guides: Record<TopicFamily, LessonGuide> = {
     feedback: text("Первая цифра числа 14 — это 1 десяток.", "14 санынын биринчи цифрасы — 1 ондук."),
   },
   "word-problems": {
-    visual: "Было 5　＋　пришло 2　＝　?",
+    visual: "",
+    fruitGroups: [
+      { fruit: "apple", count: 5, label: text("Было", "Бар эле") },
+      { fruit: "apple", count: 2, label: text("Добавили", "Кошулду") },
+    ],
     steps: [
       text("Прочитай задачу и представь, что происходит.", "Маселени окуп, анда эмне болуп жатканын элестет."),
       text("Найди, что известно и что нужно узнать.", "Эмне белгилүү экенин жана эмнени табыш керектигин аныкта."),
@@ -168,7 +175,11 @@ const guides: Record<TopicFamily, LessonGuide> = {
     feedback: text("Верно: от 0 до 5 — пять сантиметров.", "Туура: 0дөн 5ке чейин — беш сантиметр."),
   },
   data: {
-    visual: "🍎　● ● ●\n🍐　● ●",
+    visual: "",
+    fruitGroups: [
+      { fruit: "apple", count: 3 },
+      { fruit: "pear", count: 2 },
+    ],
     steps: [
       text("Сначала прочитай названия строк и столбцов.", "Адегенде саптардын жана мамычалардын аттарын оку."),
       text("Найди нужную строку и посчитай значки или числа.", "Керектүү сапты таап, белгилерди же сандарды сана."),
@@ -233,7 +244,8 @@ const guides: Record<TopicFamily, LessonGuide> = {
     feedback: text("7 − 2 = 5. Проверка: 5 + 2 действительно равно 7.", "7 − 2 = 5. Текшерүү: 5 + 2 чын эле 7ге барабар."),
   },
   multiplication: {
-    visual: "3 × 4 = 4 + 4 + 4",
+    visual: "",
+    fruitGroups: [{ fruit: "orange", count: 4, groupCount: 3 }],
     steps: [
       text("Умножение — это сложение одинаковых групп.", "Көбөйтүү — бирдей топторду кошуу."),
       text("Первое число показывает количество групп, второе — сколько предметов в каждой.", "Биринчи сан топтордун санын, экинчиси ар бир топтогу буюмдардын санын көрсөтөт."),
@@ -261,6 +273,30 @@ const guides: Record<TopicFamily, LessonGuide> = {
 };
 
 export function getLessonGuide(slot: LessonSlot): LessonGuide {
+  if (hasTopicSpecificPractice(slot)) {
+    const task = createPracticeTasks(slot)[0];
+    const objective = topicObjective(slot.topic);
+    const taskOptions = task.options ?? [
+      { value: String(Number(task.answer) - 1), ru: String(Number(task.answer) - 1), ky: String(Number(task.answer) - 1) },
+      { value: task.answer, ru: task.answer, ky: task.answer },
+      { value: String(Number(task.answer) + 1), ru: String(Number(task.answer) + 1), ky: String(Number(task.answer) + 1) },
+    ];
+    return {
+      visual: task.visual ?? "",
+      fruitGroups: task.fruitGroups,
+      steps: [
+        objective,
+        task.hint,
+        text("Реши пример, затем проверь ответ по объяснению.", "Мисалды чыгарып, анан түшүндүрмө менен жоопту текшер."),
+      ],
+      example: task.explanation,
+      prompt: task.prompt,
+      options: taskOptions.map((item) => choice(item.value, item.ru, item.ky)),
+      answer: task.answer,
+      feedback: task.explanation,
+    };
+  }
+
   if (slot.topic.family === "numbers" && slot.grade === 2 && /рим/i.test(slot.topic.titleRu)) {
     return {
       visual: "I　II　III　IV　V",

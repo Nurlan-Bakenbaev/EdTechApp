@@ -4,6 +4,7 @@ import { POST } from "@/app/api/auth/register/route";
 const validInput = {
   displayName: "  Star   Fox ",
   email: " Parent@Example.com ",
+  mascotId: "fox",
   password: "Correct horse 42!",
   consent: true,
 };
@@ -49,7 +50,7 @@ describe("parent account registration endpoint", () => {
     expect(url.toString()).toBe("https://school-test.supabase.co/auth/v1/signup");
     expect(new Headers(init.headers).get("apikey")).toBe("test-anon-key");
     expect(forwarded.email).toBe("parent@example.com");
-    expect(forwarded.data).toEqual({ display_name: "Star Fox" });
+    expect(forwarded.data).toEqual({ display_name: "Star Fox", mascot_id: "fox" });
     expect(forwarded.password).toBe(validInput.password);
     expect(JSON.stringify(forwarded)).not.toMatch(/child|student|dateOfBirth/i);
     expect(JSON.stringify(body)).not.toContain("must-not-be-returned");
@@ -104,6 +105,7 @@ describe("parent account registration endpoint", () => {
     const inputWithoutDisplayName = {
       displayName: "",
       email: validInput.email,
+      mascotId: "",
       password: validInput.password,
       consent: validInput.consent,
     };
@@ -113,6 +115,19 @@ describe("parent account registration endpoint", () => {
 
     expect(response.status).toBe(202);
     expect(forwarded.data).toEqual({});
+  });
+
+  it("rejects unknown mascot IDs before contacting Supabase", async () => {
+    vi.stubEnv("SUPABASE_URL", "https://school-test.supabase.co");
+    vi.stubEnv("SUPABASE_ANON_KEY", "test-anon-key");
+    const fetchMock = vi.fn();
+    vi.stubGlobal("fetch", fetchMock);
+
+    const response = await POST(registrationRequest({ ...validInput, mascotId: "not-a-mascot" }));
+
+    expect(response.status).toBe(400);
+    expect(await response.json()).toEqual({ code: "invalid_request" });
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 
   it("reports missing backend configuration without pretending registration succeeded", async () => {

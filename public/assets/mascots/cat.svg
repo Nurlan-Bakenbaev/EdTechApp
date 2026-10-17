@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Friendly cat mascot</title>
+  <circle cx="64" cy="67" r="57" fill="#dff4e9"/>
+  <path fill="#7fc6bd" stroke="#438b86" stroke-linejoin="round" stroke-width="4" d="m18 57 6-38 34 22h12l34-22 6 38c8 25-2 52-20 63-16 10-36 10-52 0C20 109 10 82 18 57Z"/>
+  <path fill="#f4b2aa" d="m31 36 22 13-23 6Zm66 0L75 49l23 6Z"/>
+  <ellipse cx="48" cy="69" rx="5" ry="8" fill="#384541"/><ellipse cx="80" cy="69" rx="5" ry="8" fill="#384541"/>
+  <path fill="#ed8f93" d="M58 85q6-7 12 0-2 6-6 6t-6-6Z"/><path d="M64 91q-5 8-12 4m12-4q5 8 12 4" fill="none" stroke="#48645c" stroke-linecap="round" stroke-width="3"/>
+  <path d="m38 84-22-4m23 12-23 3m74-11 22-4m-23 12 23 3" stroke="#f7eee1" stroke-linecap="round" stroke-width="3"/>
+  <circle cx="35" cy="84" r="5" fill="#f5a4a1"/><circle cx="93" cy="84" r="5" fill="#f5a4a1"/>
+</svg>

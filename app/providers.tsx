@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { getLocalDateKey, getNextStudyStreak, isDateKey } from "@/lib/study-streak";
 
 export type Language = "ru" | "ky";
 
@@ -16,6 +17,8 @@ interface ProgressState {
   completed: string[];
   lastLesson: string;
   xp: number;
+  studyStreak: number;
+  lastStudyDate: string | null;
   lessonCheckpoints: Record<string, LessonCheckpoint>;
 }
 
@@ -79,6 +82,8 @@ const emptyProgress: ProgressState = {
   completed: [],
   lastLesson: "g1-t01-h1",
   xp: 0,
+  studyStreak: 0,
+  lastStudyDate: null,
   lessonCheckpoints: {},
 };
 
@@ -107,6 +112,8 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
             completed: Array.isArray(parsed.completed) ? parsed.completed.filter((item): item is string => typeof item === "string") : [],
             lastLesson: typeof parsed.lastLesson === "string" ? parsed.lastLesson : emptyProgress.lastLesson,
             xp: typeof parsed.xp === "number" ? parsed.xp : 0,
+            studyStreak: Number.isInteger(parsed.studyStreak) && parsed.studyStreak! >= 0 ? parsed.studyStreak! : 0,
+            lastStudyDate: isDateKey(parsed.lastStudyDate) ? parsed.lastStudyDate : null,
             lessonCheckpoints: parseLessonCheckpoints(parsed.lessonCheckpoints),
           });
         } catch {
@@ -135,11 +142,18 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
 
   const completeLesson = useCallback((lessonId: string) => {
     setProgress((current) => {
-      if (current.completed.includes(lessonId)) return { ...current, lastLesson: lessonId };
+      const now = new Date();
+      const today = getLocalDateKey(now);
+      const studyStreak = getNextStudyStreak(current.studyStreak, current.lastStudyDate, now);
+      if (current.completed.includes(lessonId)) {
+        return { ...current, lastLesson: lessonId, studyStreak, lastStudyDate: today };
+      }
       return {
         completed: [...current.completed, lessonId],
         lastLesson: lessonId,
         xp: current.xp + 60,
+        studyStreak,
+        lastStudyDate: today,
         lessonCheckpoints: current.lessonCheckpoints,
       };
     });

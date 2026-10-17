@@ -1,9 +1,12 @@
+import { isMascotId, type MascotId } from "@/lib/mascots";
+
 const maxRequestBytes = 8 * 1024;
 const maximumPasswordBytes = 72;
 
 type RegistrationInput = {
   displayName?: string;
   email: string;
+  mascotId?: MascotId;
   password: string;
   consent: boolean;
 };
@@ -24,10 +27,15 @@ function parseRegistrationInput(value: unknown): RegistrationInput | null {
   const fields = value as Record<string, unknown>;
   if (
     (fields.displayName !== undefined && typeof fields.displayName !== "string")
+    || (fields.mascotId !== undefined && typeof fields.mascotId !== "string")
     || typeof fields.email !== "string"
     || typeof fields.password !== "string"
     || fields.consent !== true
   ) return null;
+
+  if (fields.mascotId !== undefined && fields.mascotId !== "" && !isMascotId(fields.mascotId)) {
+    return null;
+  }
 
   const displayName = typeof fields.displayName === "string"
     ? fields.displayName.trim().replace(/\s+/g, " ")
@@ -43,7 +51,13 @@ function parseRegistrationInput(value: unknown): RegistrationInput | null {
     || passwordBytes > maximumPasswordBytes
   ) return null;
 
-  return { ...(displayName ? { displayName } : {}), email, password: fields.password, consent: true };
+  return {
+    ...(displayName ? { displayName } : {}),
+    ...(isMascotId(fields.mascotId) ? { mascotId: fields.mascotId } : {}),
+    email,
+    password: fields.password,
+    consent: true,
+  };
 }
 
 function isDuplicateAccountError(payload: unknown): boolean {
@@ -125,7 +139,10 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         email: input.email,
         password: input.password,
-        data: input.displayName ? { display_name: input.displayName } : {},
+        data: {
+          ...(input.displayName ? { display_name: input.displayName } : {}),
+          ...(input.mascotId ? { mascot_id: input.mascotId } : {}),
+        },
       }),
       signal: AbortSignal.timeout(8_000),
       cache: "no-store",

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Icon } from "@/components/icon";
 import { t, useLanguage } from "@/app/providers";
+import { FruitIllustration } from "@/components/fruit-illustration";
 import type { PracticeTask } from "@/lib/practice";
 import type { TopicFamily } from "@/lib/curriculum";
 import { TutorChat } from "@/components/tutor-chat";
@@ -56,6 +57,7 @@ export function PracticeRunner({ tasks, onComplete, startOffset = 0, totalCount,
         <div className="task-dots" aria-hidden="true">{Array.from({ length: fullCount }, (_, dot) => <i className={dot < displayIndex ? "filled" : ""} key={dot}/>)}</div>
       </div>
       <div className="task-card" key={task.id}>
+        {task.fruitGroups && <FruitIllustration groups={task.fruitGroups} language={language} />}
         {task.visual && (
           <div className={`task-visual ${largeFigure ? "large-figures" : ""}`} aria-hidden="true">
             {task.visual.split("\n").map((line, lineIndex) => (

@@ -5,10 +5,12 @@ import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { t, useLanguage, useProgress } from "@/app/providers";
 import { expandLessonSlots } from "@/lib/curriculum";
+import { getCurrentStudyStreak, getRussianDayUnit } from "@/lib/study-streak";
 
 export function DashboardPage() {
   const { language } = useLanguage();
   const progress = useProgress();
+  const studyStreak = getCurrentStudyStreak(progress.studyStreak, progress.lastStudyDate);
   const allSlots = [...expandLessonSlots(1), ...expandLessonSlots(2)];
   const completedPercent = Math.round((progress.completed.length / allSlots.length) * 100);
   const last = allSlots.find((slot) => slot.id === progress.lastLesson) ?? allSlots[0];
@@ -23,7 +25,7 @@ export function DashboardPage() {
             <h1>{t(language, "С возвращением!", "Кайра келгениңе кубанычтабыз!")}</h1>
             <p>{t(language, "Сегодня достаточно одного маленького шага.", "Бүгүн бир кичинекей кадам жетиштүү.")}</p>
           </div>
-          <div className="streak-card"><span><Icon name="flame" size={24}/></span><div><strong>{Math.max(1, Math.min(7, progress.completed.length || 1))}</strong><small>{t(language, "дней подряд", "күн катары")}</small></div></div>
+          <div className="streak-card"><span><Icon name="flame" size={24}/></span><div><strong>{studyStreak}</strong><small>{language === "ru" ? `${getRussianDayUnit(studyStreak)} подряд` : "күн катары менен"}</small></div></div>
         </section>
 
         <div className="dashboard-grid">
@@ -36,7 +38,7 @@ export function DashboardPage() {
               <div className="progress-track large"><span style={{ width: `${Math.max(8, ((last.part - 1) / last.topic.hours) * 100)}%` }} /></div>
               <Link className="button button-primary" href={continueHref}>{t(language, "Продолжить", "Улантуу")} <Icon name="arrow" size={18}/></Link>
             </div>
-            <div className="continue-mascot" aria-hidden="true"><Image src="/assets/zhyldyz-mentor.png" alt="" width={1120} height={1374}/></div>
+            <div className="continue-mascot" aria-hidden="true"><Image src="/assets/zhyldyz-mentor.png" alt="" width={1120} height={1374} sizes="330px" loading="eager"/></div>
           </section>
 
           <aside className="progress-summary">

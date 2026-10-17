@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Friendly bear mascot</title>
+  <circle cx="64" cy="67" r="57" fill="#e8e2ff"/>
+  <circle cx="35" cy="39" r="19" fill="#a66a47" stroke="#704735" stroke-width="4"/><circle cx="93" cy="39" r="19" fill="#a66a47" stroke="#704735" stroke-width="4"/>
+  <circle cx="64" cy="66" r="46" fill="#b97e58" stroke="#704735" stroke-width="4"/>
+  <circle cx="35" cy="40" r="9" fill="#e8b18f"/><circle cx="93" cy="40" r="9" fill="#e8b18f"/>
+  <ellipse cx="64" cy="83" rx="28" ry="21" fill="#f4d7b7"/>
+  <ellipse cx="48" cy="66" rx="4" ry="6" fill="#403635"/><ellipse cx="80" cy="66" rx="4" ry="6" fill="#403635"/>
+  <ellipse cx="64" cy="79" rx="7" ry="5" fill="#543a35"/>
+  <path d="M64 84q-7 9-15 2m15-2q7 9 15 2" fill="none" stroke="#704735" stroke-linecap="round" stroke-width="3"/>
+  <circle cx="41" cy="82" r="6" fill="#f2a994"/><circle cx="87" cy="82" r="6" fill="#f2a994"/>
+</svg>

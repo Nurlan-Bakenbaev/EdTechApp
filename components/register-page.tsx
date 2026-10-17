@@ -2,8 +2,10 @@
 
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Icon } from "@/components/icon";
 import { t, useLanguage } from "@/app/providers";
+import { mascots, type MascotId } from "@/lib/mascots";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 type ErrorCode = "invalid_request" | "password_mismatch" | "weak_password" | "registration_unavailable" | "rate_limited" | "registration_failed";
@@ -26,6 +28,7 @@ export function RegisterPage() {
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorCode, setErrorCode] = useState<ErrorCode>("registration_unavailable");
   const [password, setPassword] = useState("");
+  const [selectedMascot, setSelectedMascot] = useState<MascotId | null>(null);
   const passwordIsStrong = [...password].length >= 12
     && /\p{Lu}/u.test(password)
     && /\p{N}/u.test(password)
@@ -53,6 +56,7 @@ export function RegisterPage() {
         body: JSON.stringify({
           displayName: formData.get("displayName"),
           email: formData.get("email"),
+          mascotId: selectedMascot ?? "",
           password,
           consent: formData.get("consent") === "on",
         }),
@@ -63,6 +67,7 @@ export function RegisterPage() {
       if (response.status === 202 && code === "confirmation_required") {
         setFormState("success");
         form.reset();
+        setSelectedMascot(null);
         return;
       }
 
@@ -89,7 +94,7 @@ export function RegisterPage() {
         <section className="register-card" aria-labelledby="register-title">
           <span className="eyebrow compact"><span className="eyebrow-dot" />{t(language, "Аккаунт родителя", "Ата-эненин аккаунту")}</span>
           <h1 id="register-title">{t(language, "Создайте аккаунт BILIM", "BILIM аккаунтун түзүңүз")}</h1>
-          <p className="register-intro">{t(language, "Аккаунт создаёт родитель. Настоящее имя и данные о детях не обезательны.", "Аккаунтту ата-эне түзөт. Чыныгы ысым жана балдар тууралуу маалымат керек эмес.")}</p>
+          <p className="register-intro">{t(language, "Аккаунт создаёт родитель. Настоящее имя и данные о детях не нужны.", "Аккаунтту ата-эне түзөт. Чыныгы ысым жана балдар тууралуу маалымат керек эмес.")}</p>
 
           {formState === "success" ? (
             <div className="register-message register-success" role="status">
@@ -106,6 +111,39 @@ export function RegisterPage() {
                 <input autoComplete="nickname" maxLength={80} name="displayName" placeholder={t(language, "Например: Звёздный кот или MathFox", "Мисалы: Жылдыздуу мышык же MathFox")} />
                 <small>{t(language, "Можно написать ник или любимого персонажа. Настоящее имя указывать не нужно.", "Никнейм же сүйүктүү каарманыңызды жазыңыз. Чыныгы ысымды көрсөтүүнүн кереги жок.")}</small>
               </label>
+              <section className="mascot-picker" aria-labelledby="mascot-picker-title">
+                <div className="mascot-picker-heading">
+                  <div>
+                    <h2 id="mascot-picker-title">{t(language, "Выбери своего аватара", "Аватарыңды танда")}</h2>
+                    <p>{t(language, "Кого возьмём с собой в уроки? Выбор можно не делать.", "Сабактарга кимди алабыз? Тандабай койсоң да болот.")}</p>
+                  </div>
+                  {selectedMascot && (
+                    <button className="mascot-clear" onClick={() => setSelectedMascot(null)} type="button">
+                      {t(language, "Не выбирать", "Тандабоо")}
+                    </button>
+                  )}
+                </div>
+                <div className="mascot-grid" role="radiogroup" aria-labelledby="mascot-picker-title">
+                  {mascots.map((mascot) => (
+                    <label
+                      className={`mascot-option${selectedMascot === mascot.id ? " selected" : ""}`}
+                      key={mascot.id}
+                    >
+                      <input
+                        checked={selectedMascot === mascot.id}
+                        className="mascot-radio"
+                        name="mascotId"
+                        onChange={() => setSelectedMascot(mascot.id)}
+                        type="radio"
+                        value={mascot.id}
+                      />
+                      <Image alt="" height={76} src={mascot.image} width={76} />
+                      <span className="mascot-name">{mascot.name[language]}</span>
+                      <span className="mascot-talent">{mascot.talent[language]}</span>
+                    </label>
+                  ))}
+                </div>
+              </section>
               <label className="register-field">
                 <span>{t(language, "Электронная почта", "Электрондук почта")}</span>
                 <input autoComplete="email" maxLength={254} name="email" required type="email" />
@@ -135,7 +173,7 @@ export function RegisterPage() {
               <div className="register-consent">
                 <input id="register-consent" name="consent" required type="checkbox" />
                 <div>
-                  <label htmlFor="register-consent">{t(language, "Я — родитель, даю согласие на обработку электронной почты, пароля и, если указан, никнейма для создания аккаунта и подтверждения адреса через Supabase Auth.", "Мен ата-эне же мыйзамдуу өкүл катары Supabase Auth аркылуу аккаунт түзүү жана даректи ырастоо үчүн электрондук почтамды, сырсөзүмдү жана көрсөтүлсө никнеймимди иштетүүгө макулдук берем.")}</label>
+                  <label htmlFor="register-consent">{t(language, "Я — родитель или законный представитель и даю согласие на обработку электронной почты, пароля, выбранного зверька и, если указан, никнейма для создания аккаунта и подтверждения адреса через Supabase Auth.", "Мен ата-эне же мыйзамдуу өкүл катары Supabase Auth аркылуу аккаунт түзүү жана даректи ырастоо үчүн электрондук почтамды, сырсөзүмдү, тандалган жаныбарды жана көрсөтүлсө никнеймимди иштетүүгө макулдук берем.")}</label>
                   <p className="register-policy-link">
                     {t(language, "Перед согласием прочитайте ", "Макулдук берүүдөн мурда ")}
                     <Link href="/privacy">{t(language, "уведомление об обработке данных", "маалыматтарды иштетүү билдирүүсүн")}</Link>

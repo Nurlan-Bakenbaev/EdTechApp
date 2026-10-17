@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Friendly fox mascot</title>
+  <circle cx="64" cy="67" r="57" fill="#ffe3c2"/>
+  <path fill="#ef8845" stroke="#a94d32" stroke-linejoin="round" stroke-width="4" d="m20 59 5-39 31 25 8-3 8 3 31-25 5 39c10 17 6 44-8 55-19 16-57 16-76 0-14-11-18-38-4-55Z"/>
+  <path fill="#fff5e8" stroke="#cf7146" stroke-width="3" d="M29 71c9-13 23-14 35 2 12-16 26-15 35-2 5 17-8 36-35 37-27-1-40-20-35-37Z"/>
+  <path fill="#fff0dc" d="m28 30 22 20-21 2Zm72 0L78 50l21 2Z"/>
+  <ellipse cx="48" cy="68" rx="4" ry="6" fill="#423b38"/><ellipse cx="80" cy="68" rx="4" ry="6" fill="#423b38"/>
+  <path fill="#603d38" d="M58 82q6-7 12 0-2 7-6 7t-6-7Z"/><path d="M64 89q-6 7-12 2m12-2q6 7 12 2" fill="none" stroke="#603d38" stroke-linecap="round" stroke-width="3"/>
+  <circle cx="35" cy="81" r="5" fill="#f8b5a0"/><circle cx="93" cy="81" r="5" fill="#f8b5a0"/>
+</svg>
