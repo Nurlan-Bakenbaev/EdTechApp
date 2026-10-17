@@ -1,0 +1,11 @@
+node_modules/
+.vs/
+.next/
+OllamaSetup.exe
+out/
+coverage/
+.env
+.env.local
+*.log
+*.tsbuildinfo
+tmp/
