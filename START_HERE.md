@@ -30,27 +30,72 @@ Your BILIM app now has **Google OAuth + Supabase** authentication!
    SUPABASE_SERVICE_ROLE_KEY=your-key-here
    ```
 
-### Step 2: Create Google OAuth Credentials
-1. Visit https://console.cloud.google.com
-2. Create new project called "BILIM App"
-3. Enable Google+ API
-4. Create OAuth 2.0 Web credentials
-5. Add redirect: `http://localhost:3111/api/auth/callback/google`
-6. Copy Client ID and Secret to `.env.local`:
-   ```
-   GOOGLE_CLIENT_ID=your-client-id.apps.googleusercontent.com
-   GOOGLE_CLIENT_SECRET=your-secret-here
-   ```
+### Step 2: Create Google OAuth Credentials (Detailed)
 
-### Step 3: Generate Secret
-```bash
-openssl rand -base64 32
-```
-Add to `.env.local`:
-```
-NEXTAUTH_SECRET=your-generated-secret-here
-NEXTAUTH_URL=http://localhost:3111
-```
+1. **Go to Google Cloud Console**
+   - Visit https://console.cloud.google.com
+   - Sign in with your Google account (create one if needed)
+
+2. **Create a New Project**
+   - Click "Select a Project" dropdown at top
+   - Click "New Project" button
+   - Name: `BILIM App`
+   - Click "Create" and wait ~30 seconds
+
+3. **Enable Google+ API**
+   - Left sidebar → APIs & Services → Library
+   - Search: "Google+ API"
+   - Click the result
+   - Click "Enable" button
+   - Wait for it to activate (usually instant)
+
+4. **Create OAuth 2.0 Credentials**
+   - Left sidebar → APIs & Services → Credentials
+   - Click "+ Create Credentials" button
+   - Choose "OAuth 2.0 Client ID"
+   - If prompted for Consent Screen:
+     - Click "Configure Consent Screen"
+     - Choose "External" user type
+     - Fill app name: `BILIM`
+     - Add support email: your email address
+     - Add scopes: search for and add:
+       - `userinfo.email`
+       - `userinfo.profile`
+     - Click "Save and continue" at bottom
+   - Back to credentials, select **Web Application**
+   - Name it: `BILIM App Auth`
+
+5. **Add Authorized Redirect URI**
+   - In Web Application settings, find "Authorized redirect URIs"
+   - Click "Add URI" button
+   - Paste: `http://localhost:3111/api/auth/callback/google`
+   - Click "Create" button
+
+6. **Copy Your Credentials**
+   - You'll see a modal with:
+     - **Client ID** (looks like: `xxx.apps.googleusercontent.com`)
+     - **Client Secret** (long random string)
+   - Copy both to `.env.local`:
+     ```
+     GOOGLE_CLIENT_ID=paste-client-id-here
+     GOOGLE_CLIENT_SECRET=paste-client-secret-here
+     ```
+
+### Step 3: Generate NextAuth Secret
+
+1. **Generate Secret Key**
+   - Option A: Open terminal/PowerShell and run:
+     ```bash
+     openssl rand -base64 32
+     ```
+   - Option B: Visit https://generate-secret.vercel.app/32
+   - Copy the generated secret string
+
+2. **Add to `.env.local`**
+   ```
+   NEXTAUTH_SECRET=paste-your-generated-secret-here
+   NEXTAUTH_URL=http://localhost:3111
+   ```
 
 ### Step 4: Test
 ```bash
