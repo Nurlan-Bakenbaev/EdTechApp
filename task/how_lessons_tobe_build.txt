@@ -1,0 +1,36 @@
+You are a Senior EdTech Frontend Developer. The core frontend of our children's math learning platform (inspired by sofatutor) is already built. 
+
+Now, your task is to implement the **Core Lesson Module** for 1st-grade mathematics based on our curriculum. 
+
+Please write the clean, production-ready code (React/Next.js, Tailwind CSS, Framer Motion) for the following 4 interconnected components of a lesson:
+
+### 1. Animated Video Explanation Player Component (`LessonVideoPlayer.tsx`)
+- **Concept:** Instead of boring lectures, the video player presents a short 3-4 minute story-driven explanation featuring cartoon characters (e.g., a cute animal counting apples or buying toys with coins to explain price/value/mass).
+- **Features:** 
+  - Step-by-step animated visual timeline (using Framer Motion or SVG/Canvas animations).
+  - Synchronized captions or text elements appearing line-by-line as the audio/narrative progresses.
+  - Play, pause, replay, and "Next Step" controls designed for children with large, friendly buttons.
+
+### 2. Interactive Exercises Component (`LessonExercises.tsx` / Übungen)
+- **Concept:** Immediately after the video, the child practices the concept through interactive mini-games.
+- **Mechanics to implement:**
+  - **Drag-and-Drop:** Dragging objects (e.g., apples, coins, shapes) into target boxes.
+  - **Matching:** Connecting items with lines.
+  - **Multiple Choice:** Selecting the correct answer card.
+- **Soft Feedback System:** If the child makes a mistake, do NOT show a harsh error screen. Instead, display a friendly mascot hint (e.g., "Almost there! Try counting the apples one more time 🍎").
+- **Reward Trigger:** Upon successful completion, trigger a celebration state.
+
+### 3. Printable Worksheet Generator Component (`ArbeitsblattGenerator.tsx`)
+- **Concept:** A tool for parents to download offline practice materials for the current lesson topic.
+- **Features:**
+  - A clean "Print Worksheet" button.
+  - Generates a printable view / PDF-ready layout containing: tracing exercises for numbers, basic addition/subtraction problems, visual illustrations, and a hidden "Answer Key for Parents" section at the bottom.
+
+### 4. Lesson Gamification & Reward Integration (`LessonRewards.tsx`)
+- **Concept:** Rewarding the child's progress to maintain high motivation without pressure.
+- **Features:**
+  - Trigger celebratory confetti animation (`canvas-confetti`) when completing all exercises in a lesson.
+  - Award Stars (⭐️) and Experience Points (XP).
+  - Update the user profile state and unlock the next lesson/chapter on the adventure map.
+
+Please provide the implementation code step-by-step, starting with the `LessonVideoPlayer` and `LessonExercises` components. Explain how they integrate with the existing frontend.

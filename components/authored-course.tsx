@@ -94,7 +94,7 @@ export function AuthoredCoursePage() {
               key={lesson.id}
               aria-label={`Урок ${lesson.order}: ${lesson.title}${complete ? ", пройден" : current ? ", следующий урок" : ""}. Награда: ${formatLessonPoints(lessonPointsForId(lesson.id))}. Тема: ${topicPoints} из 100 баллов.`}
               aria-current={current ? "step" : undefined}
-              style={{ "--stop-accent": accent, "--stop-tint": tint } as React.CSSProperties}
+              style={{ "--stop-accent": accent, "--stop-tint": tint, "--stop-index": lesson.order % 10 } as React.CSSProperties}
             >
               <span className="kid-map-art" aria-hidden="true">{artFor(lesson)}</span>
               {complete && <span className="kid-map-star" aria-hidden="true">★</span>}
