@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Icon } from "@/components/icon";
 import { t, useLanguage } from "@/app/providers";
+import { useAuth } from "@/lib/use-auth";
+import { useRouter } from "next/navigation";
 
 const links = [
   { href: "/dashboard", ru: "Кабинет", ky: "Жеке кабинет" },
@@ -14,6 +17,13 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
+  const { user, isAuthenticated, isLoading, logout } = useAuth();
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await logout();
+    router.push("/");
+  };
 
   return (
     <header className="site-header">
@@ -34,9 +44,35 @@ export function SiteHeader() {
             <span className={language === "ru" ? "selected" : ""}>RU</span>
             <span className={language === "ky" ? "selected" : ""}>KY</span>
           </button>
-          <Link className="header-register" href="/register">
-            {t(language, "Регистрация", "Катталуу")}
-          </Link>
+
+          {isLoading ? (
+            <div className="auth-loading">{t(language, "Загрузка...", "Жүктөлүүчү...")}</div>
+          ) : isAuthenticated && user ? (
+            <>
+              <div className="user-info">
+                <span className="user-name">{user.name || user.email}</span>
+                {user.image && <Image src={user.image} alt={user.name || "User"} width={32} height={32} className="user-avatar" />}
+              </div>
+              <button
+                className="logout-button"
+                onClick={handleLogout}
+                type="button"
+                aria-label={t(language, "Выйти", "Чыгуу")}
+              >
+                {t(language, "Выйти", "Чыгуу")}
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="header-login" href="/auth/signin">
+                {t(language, "Вход", "Кирүү")}
+              </Link>
+              <Link className="header-register" href="/register">
+                {t(language, "Регистрация", "Катталуу")}
+              </Link>
+            </>
+          )}
+
           <Link className="profile-button" href="/dashboard" aria-label={t(language, "Открыть кабинет", "Жеке кабинетти ачуу")}>
             <Icon name="user" size={19} />
           </Link>

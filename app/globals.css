@@ -184,6 +184,21 @@ p {
   gap: 10px;
 }
 
+.header-login {
+  background: #e8f3ed;
+  border-radius: 12px;
+  color: var(--teal);
+  font-size: 13px;
+  font-weight: 850;
+  padding: 10px 12px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.header-login:hover {
+  background: #d0e8e0;
+  transform: translateY(-1px);
+}
+
 .header-register {
   background: var(--coral-soft);
   border-radius: 12px;
@@ -197,6 +212,52 @@ p {
 .header-register:hover {
   background: #ffe0da;
   transform: translateY(-1px);
+}
+
+.user-info {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.user-name {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+.logout-button {
+  background: #ffe4dd;
+  border: 0;
+  border-radius: 12px;
+  color: #a44d41;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 850;
+  padding: 10px 12px;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.logout-button:hover {
+  background: #ffd0c4;
+  transform: translateY(-1px);
+}
+
+.auth-loading {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .language-switch {
