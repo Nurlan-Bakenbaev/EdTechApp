@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AppProviders } from "@/app/providers";
 import { NextAuthProvider } from "@/lib/next-auth-provider";
+import { AuthProvider } from "@/lib/auth-context";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -14,13 +15,15 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body>
-        <NextAuthProvider>
-          <AppProviders>
-            <SiteHeader />
-            <main>{children}</main>
-            <SiteFooter />
-          </AppProviders>
-        </NextAuthProvider>
+        <AuthProvider>
+          <NextAuthProvider>
+            <AppProviders>
+              <SiteHeader />
+              <main>{children}</main>
+              <SiteFooter />
+            </AppProviders>
+          </NextAuthProvider>
+        </AuthProvider>
       </body>
     </html>
   );

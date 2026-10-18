@@ -5,8 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Icon } from "@/components/icon";
 import { t, useLanguage } from "@/app/providers";
-import { useAuth } from "@/lib/use-auth";
-import { useRouter } from "next/navigation";
+import { useLocalAuth } from "@/lib/auth-context";
 
 const links = [
   { href: "/dashboard", ru: "Кабинет", ky: "Жеке кабинет" },
@@ -17,13 +16,7 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname();
   const { language, toggleLanguage } = useLanguage();
-  const { user, isAuthenticated, isLoading, logout } = useAuth();
-  const router = useRouter();
-
-  const handleLogout = async () => {
-    await logout();
-    router.push("/");
-  };
+  const { user, isAuthenticated, isLoading, logout } = useLocalAuth();
 
   return (
     <header className="site-header">
@@ -55,7 +48,7 @@ export function SiteHeader() {
               </div>
               <button
                 className="logout-button"
-                onClick={handleLogout}
+                onClick={logout}
                 type="button"
                 aria-label={t(language, "Выйти", "Чыгуу")}
               >
@@ -67,7 +60,7 @@ export function SiteHeader() {
               <Link className="header-login" href="/auth/signin">
                 {t(language, "Вход", "Кирүү")}
               </Link>
-              <Link className="header-register" href="/register">
+              <Link className="header-register" href="/auth/register">
                 {t(language, "Регистрация", "Катталуу")}
               </Link>
             </>
