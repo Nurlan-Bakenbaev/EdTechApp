@@ -1,20 +1,28 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { t, useLanguage, useProgress } from "@/app/providers";
 import { expandLessonSlots, type LessonSlot } from "@/lib/curriculum";
 import { createPracticeTasks, topicObjective } from "@/lib/practice";
 import { PracticeRunner } from "@/components/practice-runner";
-import { LessonGuideStage } from "@/components/lesson-guide-stage";
+import { LessonVideoPlayer } from "@/components/LessonVideoPlayer";
 import { SpatialStudio } from "@/components/spatial-studio";
 import { LessonEngine } from "@/components/lesson-engine";
+import { LessonExercises } from "@/components/LessonExercises";
+import { ArbeitsblattGenerator } from "@/components/ArbeitsblattGenerator";
+import { LessonRewards } from "@/components/LessonRewards";
 
 export function LessonPage({ slot }: { slot: LessonSlot }) {
   const { language } = useLanguage();
   const progress = useProgress();
   const setLastLesson = progress.setLastLesson;
+  const [alreadyComplete, setAlreadyComplete] = useState(false);
+  const completedOnEntry = useRef<boolean | null>(null);
+  useEffect(() => {
+    if (progress.ready && completedOnEntry.current === null) completedOnEntry.current = progress.isComplete(slot.id);
+  }, [progress, slot.id]);
   const specialSpatial = slot.grade === 1 && slot.topic.sourceOrder === 1;
   const usesUniversalEngine = specialSpatial && slot.part === 1;
   const [phase, setPhase] = useState<"intro" | "engine" | "learn" | "spatial" | "practice" | "done">(
@@ -39,6 +47,7 @@ export function LessonPage({ slot }: { slot: LessonSlot }) {
   }, [phase]);
 
   function finish() {
+    setAlreadyComplete(progress.isComplete(slot.id));
     progress.completeLesson(slot.id);
     setPhase("done");
   }
@@ -60,23 +69,25 @@ export function LessonPage({ slot }: { slot: LessonSlot }) {
               <div className="lesson-intro-copy"><span className="kicker">{t(language, `Тема ${slot.topic.sourceNumber ?? "—"} · часть ${slot.part}`, `${slot.topic.sourceNumber ?? "—"}-тема · ${slot.part}-бөлүк`)}</span><h1>{language === "ru" ? slot.topic.titleRu : slot.topic.titleKy}</h1><p>{objective[language]}</p><div className="lesson-contract"><span><Icon name="clock" size={18}/>{t(language, "15–20 минут", "15–20 мүнөт")}</span><span><Icon name="book" size={18}/>{t(language, "Сначала разберём тему", "Адегенде теманы үйрөнөбүз")}</span><span><Icon name="sparkle" size={18}/>{t(language, "Потом задания", "Андан кийин тапшырмалар")}</span></div><button className="button button-primary large-button" onClick={() => setPhase("learn")} type="button">{t(language, "Разобраться в теме", "Теманы үйрөнүү")}<Icon name="arrow" size={19}/></button></div>
             </section>
           )}
-          {phase === "engine" && <LessonEngine slot={slot} onComplete={() => setPhase("done")} />}
-          {phase === "learn" && <LessonGuideStage slot={slot} onContinue={() => setPhase(specialSpatial ? "spatial" : "practice")} />}
+          {phase === "engine" && <LessonEngine slot={slot} onComplete={() => { setAlreadyComplete(completedOnEntry.current ?? false); setPhase("done"); }} />}
+          {phase === "learn" && <LessonVideoPlayer slot={slot} onContinue={() => setPhase(specialSpatial ? "spatial" : "practice")} />}
           {phase === "spatial" && <SpatialStudio part={slot.part} onComplete={() => setPhase("practice")}/>} 
-          {phase === "practice" && <PracticeRunner tasks={specialSpatial ? tasks.slice(1) : tasks} startOffset={specialSpatial ? 1 : 0} totalCount={6} onComplete={finish} tutorContext={{ grade: slot.grade, objective: objective[language], topic: language === "ru" ? slot.topic.titleRu : slot.topic.titleKy, topicFamily: slot.topic.family }}/>} 
+          {phase === "practice" && (slot.grade === 1 ? <LessonExercises tasks={tasks} onComplete={finish} /> : <PracticeRunner tasks={specialSpatial ? tasks.slice(1) : tasks} startOffset={specialSpatial ? 1 : 0} totalCount={6} onComplete={finish} tutorContext={{ grade: slot.grade, objective: objective[language], topic: language === "ru" ? slot.topic.titleRu : slot.topic.titleKy, topicFamily: slot.topic.family }}/>)}
           {phase === "done" && (
             <section className="lesson-complete-card">
+              <LessonRewards alreadyComplete={alreadyComplete} />
               <div className="confetti" aria-hidden="true"><i/><i/><i/><i/><i/><i/></div>
               <span className="complete-medal"><Icon name="star" size={34}/></span>
               <span className="kicker">{t(language, "Учебный час завершён", "Окуу сааты бүттү")}</span>
               <h1>{t(language, "Отличная работа!", "Абдан жакшы иштедиң!")}</h1>
-              <p>{t(language, "Ты решил все задания и получил 60 звёзд. Ошибки были частью пути — именно так растёт понимание.", "Бардык тапшырмаларды аткарып, 60 жылдыз алдың. Каталар жолдун бир бөлүгү болду — түшүнүк ушинтип өсөт.")}</p>
-              <div className="complete-stats"><div><strong>6/6</strong><span>{t(language, "заданий", "тапшырма")}</span></div><div><strong>+60</strong><span>{t(language, "звёзд", "жылдыз")}</span></div><div><strong><Icon name="check" size={22}/></strong><span>{t(language, "сохранено", "сакталды")}</span></div></div>
+              <p>{t(language, "Ты справился! Ошибки были частью пути — именно так растёт понимание.", "Сен аткардың! Каталар жолдун бир бөлүгү болду — түшүнүк ушинтип өсөт.")}</p>
+              <div className="complete-stats"><div><strong>✓</strong><span>{t(language, "задания", "тапшырмалар")}</span></div><div><strong>{progress.xp}</strong><span>XP</span></div><div><strong><Icon name="check" size={22}/></strong><span>{t(language, "сохранено", "сакталды")}</span></div></div>
               <div className="complete-actions"><Link className="button button-primary" href={nextHref}>{next ? t(language, "Следующий час", "Кийинки саат") : t(language, "К программе", "Программага")}<Icon name="arrow" size={18}/></Link><Link className="button button-ghost" href="/dashboard">{t(language, "В кабинет", "Кабинетке")}</Link></div>
             </section>
           )}
         </div>
         <aside className="lesson-sidebar">
+          <ArbeitsblattGenerator slot={slot} />
           <div className="lesson-info-card"><h3>{t(language, "Цель часа", "Сааттын максаты")}</h3><p>{objective[language]}</p><div className="lesson-source-badge"><Icon name="shield" size={17}/><span>{t(language, `Тема/часы: КТП, стр. ${slot.topic.sourcePage}`, `Тема/саат: КТП, ${slot.topic.sourcePage}-бет`)}</span></div><div className="lesson-draft-badge"><Icon name="book" size={17}/><span>{t(language, "Сценарий и задания: авторский черновик", "Сценарий жана тапшырмалар: автордук долбоор")}</span></div></div>
           <div className="lesson-part-nav"><h3>{t(language, "Части темы", "Теманын бөлүктөрү")}</h3><div>{Array.from({ length: slot.topic.hours }, (_, index) => <Link className={`${index + 1 === slot.part ? "current" : ""} ${progress.isComplete(`${slot.topic.id}-h${index + 1}`) ? "complete" : ""}`} href={`/lesson/${slot.grade}/${slot.topic.sourceOrder}/${index + 1}`} key={index}><span>{progress.isComplete(`${slot.topic.id}-h${index + 1}`) ? <Icon name="check" size={14}/> : index + 1}</span></Link>)}</div></div>
         </aside>

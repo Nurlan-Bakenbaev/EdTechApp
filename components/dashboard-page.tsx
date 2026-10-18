@@ -4,17 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { t, useLanguage, useProgress } from "@/app/providers";
-import { expandLessonSlots } from "@/lib/curriculum";
+import { activeLessonSlots, lessonHref } from "@/lib/course-navigation";
 import { getCurrentStudyStreak, getRussianDayUnit } from "@/lib/study-streak";
+import { LessonSeaPath } from "@/components/lesson-sea-path";
 
 export function DashboardPage() {
   const { language } = useLanguage();
   const progress = useProgress();
   const studyStreak = getCurrentStudyStreak(progress.studyStreak, progress.lastStudyDate);
-  const allSlots = [...expandLessonSlots(1), ...expandLessonSlots(2)];
-  const completedPercent = Math.round((progress.completed.length / allSlots.length) * 100);
+  const allSlots = [...activeLessonSlots(1), ...activeLessonSlots(2)];
+  const activeCompleted = allSlots.filter((slot) => progress.completed.includes(slot.id)).length;
+  const completedPercent = Math.round((activeCompleted / allSlots.length) * 100);
   const last = allSlots.find((slot) => slot.id === progress.lastLesson) ?? allSlots[0];
-  const continueHref = `/lesson/${last.grade}/${last.topic.sourceOrder}/${last.part}`;
+  const continueHref = lessonHref(last);
 
   return (
     <div className="page-surface dashboard-surface">
@@ -44,15 +46,16 @@ export function DashboardPage() {
           <aside className="progress-summary">
             <div className="summary-header"><span className="summary-icon"><Icon name="trophy" size={22}/></span><div><strong>{t(language, "Мой прогресс", "Менин жетишкендигим")}</strong><span>{t(language, "Сохраняется на устройстве", "Түзмөктө сакталат")}</span></div></div>
             <div className="progress-ring" style={{ "--progress": `${completedPercent * 3.6}deg` } as React.CSSProperties}><div><strong>{completedPercent}%</strong><span>{t(language, "курса", "курстун")}</span></div></div>
-            <div className="summary-stats"><div><strong>{progress.completed.length}</strong><span>{t(language, "часов готово", "саат бүттү")}</span></div><div><strong>{progress.xp}</strong><span>{t(language, "звёзд", "жылдыз")}</span></div></div>
+            <div className="summary-stats"><div><strong>{activeCompleted}</strong><span>{t(language, "уроков готово", "сабак бүттү")}</span></div><div><strong>{progress.xp}</strong><span>XP</span></div><div><strong>{progress.completed.length * 3}</strong><span>{t(language, "звёзд", "жылдыз")}</span></div></div>
           </aside>
         </div>
 
+        <LessonSeaPath />
         <section className="dashboard-section">
           <div className="dashboard-section-heading"><div><span className="kicker">{t(language, "Мои маршруты", "Менин багыттарым")}</span><h2>{t(language, "Выбери класс", "Классты танда")}</h2></div><Link href="/grades">{t(language, "Все классы", "Бардык класстар")} <Icon name="chevron" size={16}/></Link></div>
           <div className="route-grid">
             {[1, 2].map((grade) => {
-              const slots = expandLessonSlots(grade as 1 | 2);
+              const slots = activeLessonSlots(grade as 1 | 2);
               const done = slots.filter((slot) => progress.completed.includes(slot.id)).length;
               const percent = Math.round((done / slots.length) * 100);
               return (

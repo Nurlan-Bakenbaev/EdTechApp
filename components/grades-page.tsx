@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { t, useLanguage, useProgress } from "@/app/providers";
-import { expandLessonSlots } from "@/lib/curriculum";
+import { activeLessonSlots } from "@/lib/course-navigation";
 
 const planned = [
   { grade: 3, noteRu: "Два конфликтующих учебных трека", noteKy: "Эки карама-каршы окуу багыты" },
@@ -24,13 +24,13 @@ export function GradesPage() {
         </header>
         <div className="grade-cards-grid">
           {[1, 2].map((grade) => {
-            const slots = expandLessonSlots(grade as 1 | 2);
+            const slots = activeLessonSlots(grade as 1 | 2);
             const done = slots.filter((slot) => progress.completed.includes(slot.id)).length;
             return (
               <Link className={`grade-select-card available grade-${grade}`} href={`/grades/${grade}`} key={grade}>
                 <div className="grade-select-header"><span className="giant-grade">{grade}</span><span className="status-pill live"><span/>{t(language, "Открыт", "Ачык")}</span></div>
                 <h2>{t(language, `${grade}-й класс`, `${grade}-класс`)}</h2>
-                <p>{grade === 1 ? t(language, "33 темы · 96 часов · 3 часа в неделю", "33 тема · 96 саат · жумасына 3 саат") : t(language, "25 строк · 132 часа · 4 часа в неделю", "25 сап · 132 саат · жумасына 4 саат")}</p>
+                <p>{grade === 1 ? t(language, "30 тем · 85 уроков · обновлённый КТП", "30 тема · 85 сабак · жаңыланган КТП") : t(language, "25 строк · 132 часа · 4 часа в неделю", "25 сап · 132 саат · жумасына 4 саат")}</p>
                 <div className="progress-track"><span style={{ width: `${Math.max(2, (done / slots.length) * 100)}%` }}/></div>
                 <small>{t(language, `${done} из ${slots.length} часов завершено`, `${slots.length} сааттын ${done} сааты бүттү`)}</small>
                 <span className="open-label">{t(language, "Открыть программу", "Программаны ачуу")} <Icon name="arrow" size={18}/></span>

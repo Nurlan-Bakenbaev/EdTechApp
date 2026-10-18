@@ -72,13 +72,13 @@ export function HomePage() {
               <Link className="button button-primary" href="/dashboard">
                 {t(language, "Начать учиться", "Окууну баштоо")} <Icon name="arrow" size={19} />
               </Link>
-              <Link className="button button-ghost" href="/lesson/1/1/1">
+              <Link className="button button-ghost" href="/course/grade-1/g1_l001">
                 <span className="play-dot"><Icon name="play" size={14} /></span>{t(language, "Попробовать урок", "Сабакты сынап көрүү")}
               </Link>
             </div>
             <div className="hero-facts" aria-label={t(language, "Объём программы", "Программанын көлөмү")}>
-              <div><strong>58</strong><span>{t(language, "тем из КТП", "КТП темасы")}</span></div>
-              <div><strong>228</strong><span>{t(language, "учебных часов", "окуу сааты")}</span></div>
+              <div><strong>55</strong><span>{t(language, "тем из КТП", "КТП темасы")}</span></div>
+              <div><strong>217</strong><span>{t(language, "учебных часов", "окуу сааты")}</span></div>
               <div><strong>RU · KY</strong><span>{t(language, "единая математика", "бир математика")}</span></div>
             </div>
           </div>
@@ -105,7 +105,7 @@ export function HomePage() {
           <div className="class-showcase">
             <Link className="class-card class-one" href="/grades/1">
               <div className="class-card-top"><span className="class-number">1</span><span className="status-pill live"><span />{t(language, "Доступен", "Жеткиликтүү")}</span></div>
-              <div><span className="class-label">{t(language, "Первый класс", "Биринчи класс")}</span><h3>{t(language, "От пространства к числам", "Мейкиндиктен сандарга")}</h3><p>{t(language, "33 темы · 96 часов", "33 тема · 96 саат")}</p></div>
+              <div><span className="class-label">{t(language, "Первый класс", "Биринчи класс")}</span><h3>{t(language, "Первые открытия", "Алгачкы ачылыштар")}</h3><p>{t(language, "30 тем · 85 уроков", "30 тема · 85 сабак")}</p></div>
               <span className="card-arrow"><Icon name="arrow" size={20} /></span>
               <div className="shape-cluster"><i/><i/><i/></div>
             </Link>

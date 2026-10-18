@@ -49,6 +49,7 @@ npm.cmd run build
 - a four-phase Lesson Engine for the first Grade 1 lesson, with adaptive practice, a 10-question independent test, six homework activities and resumable local checkpoints;
 - Blueprint JSON scaffolds for all 163 topics, generated as non-publishable review drafts;
 - browser-local progress and achievements;
+- Grade 1 interactive answer-card drag and drop, matching connections and multiple-choice practice, printable worksheets with optional parent answers, confetti rewards and a dashboard adventure map (see [lesson module integration](docs/LESSON_MODULE.md));
 - original mentor illustration and reduced-motion support.
 
 The Kyrgyz translations, per-hour lesson scripts and exercise banks are authorial drafts that require linguistic and methodological review. The supplied source set calls the curriculum PDFs "примерный" plans; the app does not represent them as proof of accreditation or approval.

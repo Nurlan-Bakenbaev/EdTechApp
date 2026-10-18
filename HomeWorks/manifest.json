@@ -1,0 +1,767 @@
+[
+  {
+    "lesson_id": "g1_l001",
+    "content_hash": "caa9938d9c34efa253fac38e4f1ebc9a446061a4c70b88de888b93cc0306aa60",
+    "student_pdf_path": "HomeWorks/g1_l001_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l001_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.010Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l002",
+    "content_hash": "99a71a73efb4a4a759ff1d6974fdc833899f1a7395da4212d44219a1b271519d",
+    "student_pdf_path": "HomeWorks/g1_l002_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l002_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.124Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l003",
+    "content_hash": "4aef2cd5d69fd4c199c7308d8ca7d2da2c2c63f1e34384bbae4a86be17b1387e",
+    "student_pdf_path": "HomeWorks/g1_l003_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l003_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.235Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l004",
+    "content_hash": "82ebda1c8b74bfd9e1c0715a4e0f708bb8a3ffcd2355e20f9e9fff04af960ab2",
+    "student_pdf_path": "HomeWorks/g1_l004_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l004_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.347Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l005",
+    "content_hash": "f4dabb4b59424abe4b3b6ab3ddab8f4ec5cf813f70b4d740ad2de2f4d4f7a4df",
+    "student_pdf_path": "HomeWorks/g1_l005_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l005_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.463Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l006",
+    "content_hash": "48bb50e9c0773930ce2b5c108025b0742ed56d6067173c65499e00f3e8d2db32",
+    "student_pdf_path": "HomeWorks/g1_l006_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l006_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.572Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l007",
+    "content_hash": "7d82c58b7aea61fb0f05c1c89ccf6c3bde73381dcca0fe2ecbd074b672276193",
+    "student_pdf_path": "HomeWorks/g1_l007_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l007_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.685Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l008",
+    "content_hash": "61eaa6770b13b84468b41dd73b74216e3e2f659fa352ee6d29b13407e1bd9d22",
+    "student_pdf_path": "HomeWorks/g1_l008_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l008_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.792Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l009",
+    "content_hash": "f20d623983c6d4e3a3adb3af14ab10c7471c41d99ea7d77aabdabd01ec42cbf8",
+    "student_pdf_path": "HomeWorks/g1_l009_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l009_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:37.916Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l010",
+    "content_hash": "222e90143cd50181b5339e2da2e64a5799a61236377f18a5a5665fdb80b4296d",
+    "student_pdf_path": "HomeWorks/g1_l010_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l010_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.057Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l011",
+    "content_hash": "eec0e72ec141159f2309e30ca08da48665bc7bd5cc37f6584e18128baf51f7ce",
+    "student_pdf_path": "HomeWorks/g1_l011_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l011_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.182Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l012",
+    "content_hash": "7bef67699a9894028274635c569861cb4adfa9d1d9dd820ca2c405beb1f39fed",
+    "student_pdf_path": "HomeWorks/g1_l012_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l012_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.296Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l013",
+    "content_hash": "701e700b5f459f1694227d36e328f867ab28d220ad551b9390d347507740032f",
+    "student_pdf_path": "HomeWorks/g1_l013_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l013_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.406Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l014",
+    "content_hash": "cc009fea2b0d5dd864b61a6117cdb49207ae921cbdc9f1fd7458daf062870e97",
+    "student_pdf_path": "HomeWorks/g1_l014_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l014_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.519Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l015",
+    "content_hash": "e0fcfa58af788224fe54d8b8446fe0fc311c4f017a783be8711feff8a2dc2f3e",
+    "student_pdf_path": "HomeWorks/g1_l015_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l015_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.630Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l016",
+    "content_hash": "b49c77ed00e9b4890150ba122ce037db9ceb1db09e5ea3e5826ee587040f76b0",
+    "student_pdf_path": "HomeWorks/g1_l016_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l016_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.743Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l017",
+    "content_hash": "b1a4bc4cc7053d0067d1f33ed6318168fbefb659cd45487ac39fe4d5cf6fe41b",
+    "student_pdf_path": "HomeWorks/g1_l017_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l017_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.846Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l018",
+    "content_hash": "2da415313d7c518ce02732cf7e51d3586c8e4001896c0f6eb400384ea79a0582",
+    "student_pdf_path": "HomeWorks/g1_l018_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l018_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:38.963Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l019",
+    "content_hash": "dc12c34b6793cf15178b42b23cd63c393b53a904665c332c3627baa47163e7b5",
+    "student_pdf_path": "HomeWorks/g1_l019_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l019_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.060Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l020",
+    "content_hash": "841777c4c46f3ede2bb8a32717f047792b8ff7f981e7ef5fdc56692bf1ce6454",
+    "student_pdf_path": "HomeWorks/g1_l020_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l020_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.283Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l021",
+    "content_hash": "c1a5be7ea414837a3e6ac29592e37b03d5f9763564e0391abcba1430c9182b67",
+    "student_pdf_path": "HomeWorks/g1_l021_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l021_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.386Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l022",
+    "content_hash": "e6b82aff74b1fd3bb10eee1563ba02092f3652fbe8bc33f0e54049777de5e386",
+    "student_pdf_path": "HomeWorks/g1_l022_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l022_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.495Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l023",
+    "content_hash": "97d3c2044f032a5e9f0ba3fcf4e8ff458d1f7e4c20d6d83293182f66f47ea1ad",
+    "student_pdf_path": "HomeWorks/g1_l023_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l023_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.600Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l024",
+    "content_hash": "bfbe3d2c36d4f34bda2ba1b4f3bc1471276c66906bb1687379ea6f3611332039",
+    "student_pdf_path": "HomeWorks/g1_l024_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l024_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.711Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l025",
+    "content_hash": "c1e1d78ea28e1aa9c7c19ec9ba5e8d8843a24db08fca625baefa47de65dea47a",
+    "student_pdf_path": "HomeWorks/g1_l025_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l025_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.826Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l026",
+    "content_hash": "2b21455417f8a2e71cbde18b4ea8dc142536d48bae897b7ac0d4251c494bea8b",
+    "student_pdf_path": "HomeWorks/g1_l026_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l026_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:39.931Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l027",
+    "content_hash": "2cd9e538e89778c9096ae088257c42eea72fde261d2cde6fa302323abb6c019f",
+    "student_pdf_path": "HomeWorks/g1_l027_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l027_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.033Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l028",
+    "content_hash": "0a4b2b79c8ab8d060c440fc57291c17bed7f9cc1236e05efd73453d9a32c6357",
+    "student_pdf_path": "HomeWorks/g1_l028_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l028_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.128Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l029",
+    "content_hash": "c1728fe055410537f05113aeb3a68395ad7b34b127f13dc17316793757c6a6f5",
+    "student_pdf_path": "HomeWorks/g1_l029_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l029_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.238Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l030",
+    "content_hash": "f2d48793241d1438926fb0a89afa825ad21df91f2d89c62b21ec4cc4903e6a19",
+    "student_pdf_path": "HomeWorks/g1_l030_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l030_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.363Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l031",
+    "content_hash": "55d5ca82b58d896c46b1a5f67d9ec40533620f156cb8c11a374e56d3e04e3353",
+    "student_pdf_path": "HomeWorks/g1_l031_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l031_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.474Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l032",
+    "content_hash": "bc1d975c2c2683f0a4ffce80e6eeb0f932f5e3c73f73286d893ed00995519fe4",
+    "student_pdf_path": "HomeWorks/g1_l032_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l032_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.576Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l033",
+    "content_hash": "2023fb2c0ad2db69f9d0b5f00366579318f301ef114b9ca818e63afa14f5543b",
+    "student_pdf_path": "HomeWorks/g1_l033_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l033_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.676Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l034",
+    "content_hash": "91d6d52db47a1166265e2136ac030d300b331fe8d5485acd5fbf9afa0115eef8",
+    "student_pdf_path": "HomeWorks/g1_l034_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l034_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.861Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l035",
+    "content_hash": "c0767b98734e1e67ec30a2489fbc4d69efcc47bfcc4ea5cdcf5876eb46a9cd44",
+    "student_pdf_path": "HomeWorks/g1_l035_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l035_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:40.962Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l036",
+    "content_hash": "31ae3c843f4ec81f037c30111bf425095a1ba28998f86be26a14ba16101b48ad",
+    "student_pdf_path": "HomeWorks/g1_l036_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l036_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.060Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l037",
+    "content_hash": "b390314de0d32e4ce706ee9ca4300fac2f4063c54f45c6e3ce13a8b57c570ac3",
+    "student_pdf_path": "HomeWorks/g1_l037_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l037_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.153Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l038",
+    "content_hash": "0ddcad6fe45310e86e1476c8bf65295f5236ffe20909fea3e2a71d28e287c1ab",
+    "student_pdf_path": "HomeWorks/g1_l038_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l038_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.269Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l039",
+    "content_hash": "10c5c763102da5e4848155bebb1c16de02e8e892061909a7e6a09c843a7d73bf",
+    "student_pdf_path": "HomeWorks/g1_l039_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l039_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.384Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l040",
+    "content_hash": "d634b475d0ab390a9b0bda840e3287d7157b1010ebe7d4bc239cb48888053463",
+    "student_pdf_path": "HomeWorks/g1_l040_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l040_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.489Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l041",
+    "content_hash": "84e5dff035328c4aa92f95074d31cb3696341fc6eb25ff9c7833edff47e3b76c",
+    "student_pdf_path": "HomeWorks/g1_l041_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l041_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.611Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l042",
+    "content_hash": "a7e4c178372975afb0270f55fd8a92d010f09b6aef0236b63f0eeacd1db62a04",
+    "student_pdf_path": "HomeWorks/g1_l042_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l042_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.708Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l043",
+    "content_hash": "15a191efaf17d32e736db6b6f2d72ad0d2479210fe30d7e9fda2f910556b8493",
+    "student_pdf_path": "HomeWorks/g1_l043_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l043_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.812Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l044",
+    "content_hash": "98134ee2b719f7810559d2cb6d511f3ec15953e637e5f070d2618a24b4704ee8",
+    "student_pdf_path": "HomeWorks/g1_l044_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l044_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:41.928Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l045",
+    "content_hash": "f4402eb8f34e1c50cef514f8fae9c922252d6316572e9b0e5d0e9d12abed518d",
+    "student_pdf_path": "HomeWorks/g1_l045_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l045_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.036Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l046",
+    "content_hash": "8aba24b86e6b9144001adc2dfed31eeb99cd9e8ff726ad68649a7328f6466046",
+    "student_pdf_path": "HomeWorks/g1_l046_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l046_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.158Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l047",
+    "content_hash": "f7dfe705a46074a88e392ba34bfb3d10e796cb46afbf138be64e3520284f548b",
+    "student_pdf_path": "HomeWorks/g1_l047_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l047_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.259Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l048",
+    "content_hash": "c1bb2f29cf61c4ab7672f3b69eba1a7fe45c186e4e189299759c91b405cff9eb",
+    "student_pdf_path": "HomeWorks/g1_l048_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l048_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.355Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l049",
+    "content_hash": "2e74ff85fb9c41341da17087f8bfa00b8aec91c0e50a64a3c6367faecf440eb5",
+    "student_pdf_path": "HomeWorks/g1_l049_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l049_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.459Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l050",
+    "content_hash": "58000165fb4f888ee45762124e0c43dade3bf401ed915d3a866a759d8e3c09e6",
+    "student_pdf_path": "HomeWorks/g1_l050_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l050_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.553Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l051",
+    "content_hash": "25b78162f29ad4dcd446e7055a2a758bd5b31afdd71f6d077870b644cc14f55b",
+    "student_pdf_path": "HomeWorks/g1_l051_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l051_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.677Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l052",
+    "content_hash": "aa09adcf045510d0f5ca9199769e49ffde93c16e2be1de662bf94cb3810fca9f",
+    "student_pdf_path": "HomeWorks/g1_l052_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l052_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.854Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l053",
+    "content_hash": "f226bf0fbb1168dc6fd8795211fd9597675b5ec2430e5ef26dd63294df426c43",
+    "student_pdf_path": "HomeWorks/g1_l053_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l053_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:42.958Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l054",
+    "content_hash": "f6cd4eb6ad644ed6a6be824615413c55832efd1beb9adf2cf9866acba0be7007",
+    "student_pdf_path": "HomeWorks/g1_l054_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l054_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.057Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l055",
+    "content_hash": "a5c6422ba84c952e49e885157c304a0fe87d197e81d7a8971d47630d023932cc",
+    "student_pdf_path": "HomeWorks/g1_l055_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l055_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.158Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l056",
+    "content_hash": "2053e8544bb1df1d7975056713beb3bc2884398ea83eb63a869f72a86da564d4",
+    "student_pdf_path": "HomeWorks/g1_l056_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l056_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.269Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l057",
+    "content_hash": "fe908d582a5c6954c3444eb66fa90de107706b83d21258511c623b2b0447e340",
+    "student_pdf_path": "HomeWorks/g1_l057_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l057_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.377Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l058",
+    "content_hash": "0feb47522a94d5aef5a2f0a545be3ab810ab787404772328228a39b549a42b7a",
+    "student_pdf_path": "HomeWorks/g1_l058_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l058_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.483Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l059",
+    "content_hash": "c1e0ce74a0d759fc2502b910adb93150f805e37386c29f8dbfbcbe2681392afa",
+    "student_pdf_path": "HomeWorks/g1_l059_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l059_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.589Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l060",
+    "content_hash": "899ed832b5c78baba3543769e99745d0fbdc2eedf51f3607a60674c2e257d2c9",
+    "student_pdf_path": "HomeWorks/g1_l060_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l060_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.686Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l061",
+    "content_hash": "b98825e751a15d3c159b0ed3ed7cd5b1db4e861461064f45c9392287b39337f1",
+    "student_pdf_path": "HomeWorks/g1_l061_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l061_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.791Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l062",
+    "content_hash": "958bb8e99ab66d52af37015441e8bd672c5340c7ad3c096f2c12cf8040358944",
+    "student_pdf_path": "HomeWorks/g1_l062_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l062_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:43.897Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l063",
+    "content_hash": "b5f94dcd0a4e160c50e7d2f08834884c079e2bbecf655f1461ccdc46638ff446",
+    "student_pdf_path": "HomeWorks/g1_l063_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l063_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.006Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l064",
+    "content_hash": "eb0267d8f7c00b4c1c3b9e33c0170ef6e272df5ee424b1486c1350f988165909",
+    "student_pdf_path": "HomeWorks/g1_l064_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l064_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.111Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l065",
+    "content_hash": "c2d6b010afd7ec8edec5aef39f02b8a97f618e9e5777147eb2fda502989eaf0d",
+    "student_pdf_path": "HomeWorks/g1_l065_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l065_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.203Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l066",
+    "content_hash": "fdf4faa03d591af0d2ca95a0e9e08875a87bc0126b56f35e84e587ac19ebb4e0",
+    "student_pdf_path": "HomeWorks/g1_l066_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l066_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.311Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l067",
+    "content_hash": "2e510992638490f613de16a8061ab8d3e5b57fe3e69a66dc47a995ee89872f97",
+    "student_pdf_path": "HomeWorks/g1_l067_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l067_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.403Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l068",
+    "content_hash": "8dcc3d23affc08e815187b2c8f399bfed2bfb70f971091a0001b7bb74ca2651f",
+    "student_pdf_path": "HomeWorks/g1_l068_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l068_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.506Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l069",
+    "content_hash": "0442694f4b872bb6e5aeccfd22806e34f766943d0f05cf1adeed1cc5e9529056",
+    "student_pdf_path": "HomeWorks/g1_l069_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l069_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.618Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l070",
+    "content_hash": "ff2c7a68ba319fbdee8de5a50b6ff9b5010847b9c2edf951f7bf350fa0abe571",
+    "student_pdf_path": "HomeWorks/g1_l070_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l070_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.710Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l071",
+    "content_hash": "31735ecb017abb28ad152fc9d9a840068249569526fb12ac4cc3cb53383e1cb7",
+    "student_pdf_path": "HomeWorks/g1_l071_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l071_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.818Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l072",
+    "content_hash": "25cd320b7152067cc061d10d10659bc256509c286aa6f2cf5499e254ba0e56f2",
+    "student_pdf_path": "HomeWorks/g1_l072_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l072_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:44.914Z",
+    "page_count": 2
+  },
+  {
+    "lesson_id": "g1_l073",
+    "content_hash": "bcac3a88ae96af80e00576f60ef31b23b18e8b31ae075519f220199d675d4ebc",
+    "student_pdf_path": "HomeWorks/g1_l073_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l073_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.021Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l074",
+    "content_hash": "3a898691589d95246e125fb116c9b71efa21c21e415156727f12077f3730b183",
+    "student_pdf_path": "HomeWorks/g1_l074_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l074_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.124Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l075",
+    "content_hash": "a741f135d9abea740afc5337fb33f374eb200bcec1a9b830bdddb6cd988c1f3e",
+    "student_pdf_path": "HomeWorks/g1_l075_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l075_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.231Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l076",
+    "content_hash": "3441626639441024999a855532ec97aa0686925098b26dbfdaa4ee4eabe078df",
+    "student_pdf_path": "HomeWorks/g1_l076_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l076_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.336Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l077",
+    "content_hash": "055699cdc9aca0098e812afcf731f04808a535836caaef75dfa533589c158624",
+    "student_pdf_path": "HomeWorks/g1_l077_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l077_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.435Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l078",
+    "content_hash": "9cfa08fff825026ece9de28a1451976f83208c8d0b74aaa316ad69678d588a3c",
+    "student_pdf_path": "HomeWorks/g1_l078_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l078_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.532Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l079",
+    "content_hash": "44fcfed1ad15297df38e12c319fef750c57c17e2998eb142f36d14b01656497f",
+    "student_pdf_path": "HomeWorks/g1_l079_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l079_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.624Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l080",
+    "content_hash": "61a5536e2f1874fa5b5e12616817f2aa230ecd19f15f1e63a3ff4ab33e833c3b",
+    "student_pdf_path": "HomeWorks/g1_l080_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l080_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.730Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l081",
+    "content_hash": "9f7638e2c8bac1c5b0ac9565b80281bde57816f0949d805533ded71b2d559624",
+    "student_pdf_path": "HomeWorks/g1_l081_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l081_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.868Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l082",
+    "content_hash": "4081075f6451d49d6225b886d55ca978c173ee295c09fcd862b21ed4b67d94ee",
+    "student_pdf_path": "HomeWorks/g1_l082_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l082_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:45.981Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l083",
+    "content_hash": "a32c1f47ff38f012de9cb88713a86cc533631b6130693cffd849bdc5a582f2e7",
+    "student_pdf_path": "HomeWorks/g1_l083_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l083_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:46.073Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l084",
+    "content_hash": "e084e082a836082499b80824dcef4650313866f9edc8d0766fcb2112d4aefce5",
+    "student_pdf_path": "HomeWorks/g1_l084_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l084_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:46.186Z",
+    "page_count": 3
+  },
+  {
+    "lesson_id": "g1_l085",
+    "content_hash": "044aee2ff5d8ea77c3197de2a4aa0068b1086cf7e8f0be8645f5596a22f3f932",
+    "student_pdf_path": "HomeWorks/g1_l085_homework.pdf",
+    "teacher_answer_key_path": "HomeWorks/TeacherKeys/g1_l085_answers.pdf",
+    "status": "ready",
+    "generated_at": "2026-10-18T11:05:46.284Z",
+    "page_count": 3
+  }
+]
