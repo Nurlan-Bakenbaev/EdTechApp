@@ -8,7 +8,9 @@
       "blockId": "b04",
       "sourceTopic": 4,
       "topic": "Числа от 0 до 10: счёт, состав, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 12,
+      "points": 13
     },
     {
       "id": "g1_l002",
@@ -17,7 +19,9 @@
       "blockId": "b04",
       "sourceTopic": 4,
       "topic": "Числа от 0 до 10: счёт, состав, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 19
     },
     {
       "id": "g1_l003",
@@ -26,7 +30,9 @@
       "blockId": "b04",
       "sourceTopic": 4,
       "topic": "Числа от 0 до 10: счёт, состав, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 11,
+      "points": 12
     },
     {
       "id": "g1_l004",
@@ -35,7 +41,9 @@
       "blockId": "b04",
       "sourceTopic": 4,
       "topic": "Числа от 0 до 10: счёт, состав, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 17
     },
     {
       "id": "g1_l005",
@@ -44,7 +52,9 @@
       "blockId": "b04",
       "sourceTopic": 4,
       "topic": "Числа от 0 до 10: счёт, состав, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 18
     },
     {
       "id": "g1_l006",
@@ -53,7 +63,9 @@
       "blockId": "b04",
       "sourceTopic": 4,
       "topic": "Числа от 0 до 10: счёт, состав, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 19,
+      "points": 21
     },
     {
       "id": "g1_l007",
@@ -62,7 +74,9 @@
       "blockId": "b05",
       "sourceTopic": 5,
       "topic": "Числа от 0 до 20: нумерация, чтение, счёт, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 18
     },
     {
       "id": "g1_l008",
@@ -71,7 +85,9 @@
       "blockId": "b05",
       "sourceTopic": 5,
       "topic": "Числа от 0 до 20: нумерация, чтение, счёт, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 17
     },
     {
       "id": "g1_l009",
@@ -80,7 +96,9 @@
       "blockId": "b05",
       "sourceTopic": 5,
       "topic": "Числа от 0 до 20: нумерация, чтение, счёт, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 17
     },
     {
       "id": "g1_l010",
@@ -89,7 +107,9 @@
       "blockId": "b05",
       "sourceTopic": 5,
       "topic": "Числа от 0 до 20: нумерация, чтение, счёт, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 16
     },
     {
       "id": "g1_l011",
@@ -98,7 +118,9 @@
       "blockId": "b05",
       "sourceTopic": 5,
       "topic": "Числа от 0 до 20: нумерация, чтение, счёт, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 16
     },
     {
       "id": "g1_l012",
@@ -107,7 +129,9 @@
       "blockId": "b05",
       "sourceTopic": 5,
       "topic": "Числа от 0 до 20: нумерация, чтение, счёт, запись",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 16
     },
     {
       "id": "g1_l013",
@@ -116,7 +140,9 @@
       "blockId": "b06",
       "sourceTopic": 6,
       "topic": "Приблизительное количество предметов до 20",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 50
     },
     {
       "id": "g1_l014",
@@ -125,7 +151,9 @@
       "blockId": "b06",
       "sourceTopic": 6,
       "topic": "Приблизительное количество предметов до 20",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 50
     },
     {
       "id": "g1_l015",
@@ -134,7 +162,9 @@
       "blockId": "b07",
       "sourceTopic": 7,
       "topic": "Порядковые числа; чётные и нечётные числа",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 48
     },
     {
       "id": "g1_l016",
@@ -143,7 +173,9 @@
       "blockId": "b07",
       "sourceTopic": 7,
       "topic": "Порядковые числа; чётные и нечётные числа",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 52
     },
     {
       "id": "g1_l017",
@@ -152,7 +184,9 @@
       "blockId": "b08",
       "sourceTopic": 8,
       "topic": "Сравнение и упорядочивание групп предметов",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 50
     },
     {
       "id": "g1_l018",
@@ -161,7 +195,9 @@
       "blockId": "b08",
       "sourceTopic": 8,
       "topic": "Сравнение и упорядочивание групп предметов",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 50
     },
     {
       "id": "g1_l019",
@@ -170,7 +206,9 @@
       "blockId": "b09",
       "sourceTopic": 9,
       "topic": "Сложение, вычитание и названия компонентов",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 26
     },
     {
       "id": "g1_l020",
@@ -179,7 +217,9 @@
       "blockId": "b09",
       "sourceTopic": 9,
       "topic": "Сложение, вычитание и названия компонентов",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 26
     },
     {
       "id": "g1_l021",
@@ -188,7 +228,9 @@
       "blockId": "b09",
       "sourceTopic": 9,
       "topic": "Сложение, вычитание и названия компонентов",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 14,
+      "points": 22
     },
     {
       "id": "g1_l022",
@@ -197,7 +239,9 @@
       "blockId": "b09",
       "sourceTopic": 9,
       "topic": "Сложение, вычитание и названия компонентов",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 26
     },
     {
       "id": "g1_l023",
@@ -206,7 +250,9 @@
       "blockId": "b10",
       "sourceTopic": 10,
       "topic": "Пары, удваивание, распределение и группировка",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 50
     },
     {
       "id": "g1_l024",
@@ -215,7 +261,9 @@
       "blockId": "b10",
       "sourceTopic": 10,
       "topic": "Пары, удваивание, распределение и группировка",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 50
     },
     {
       "id": "g1_l025",
@@ -224,7 +272,9 @@
       "blockId": "b11",
       "sourceTopic": 11,
       "topic": "Числовой луч: размещение и сравнение",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 48
     },
     {
       "id": "g1_l026",
@@ -233,7 +283,9 @@
       "blockId": "b11",
       "sourceTopic": 11,
       "topic": "Числовой луч: размещение и сравнение",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 52
     },
     {
       "id": "g1_l027",
@@ -242,7 +294,9 @@
       "blockId": "b12",
       "sourceTopic": 12,
       "topic": "Связь сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 48
     },
     {
       "id": "g1_l028",
@@ -251,7 +305,9 @@
       "blockId": "b12",
       "sourceTopic": 12,
       "topic": "Связь сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 52
     },
     {
       "id": "g1_l029",
@@ -260,7 +316,9 @@
       "blockId": "b13",
       "sourceTopic": 13,
       "topic": "Десятки, единицы; таблицы сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 18
     },
     {
       "id": "g1_l030",
@@ -269,7 +327,9 @@
       "blockId": "b13",
       "sourceTopic": 13,
       "topic": "Десятки, единицы; таблицы сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 18
     },
     {
       "id": "g1_l031",
@@ -278,7 +338,9 @@
       "blockId": "b13",
       "sourceTopic": 13,
       "topic": "Десятки, единицы; таблицы сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 15
     },
     {
       "id": "g1_l032",
@@ -287,7 +349,9 @@
       "blockId": "b13",
       "sourceTopic": 13,
       "topic": "Десятки, единицы; таблицы сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 17
     },
     {
       "id": "g1_l033",
@@ -296,7 +360,9 @@
       "blockId": "b13",
       "sourceTopic": 13,
       "topic": "Десятки, единицы; таблицы сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 17
     },
     {
       "id": "g1_l034",
@@ -305,7 +371,9 @@
       "blockId": "b13",
       "sourceTopic": 13,
       "topic": "Десятки, единицы; таблицы сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 15
     },
     {
       "id": "g1_l035",
@@ -314,7 +382,9 @@
       "blockId": "b14",
       "sourceTopic": 14,
       "topic": "Расположение объектов в пространстве",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 11,
+      "points": 100
     },
     {
       "id": "g1_l036",
@@ -323,7 +393,9 @@
       "blockId": "b15",
       "sourceTopic": 15,
       "topic": "Плоские и объёмные фигуры",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 9,
+      "points": 50
     },
     {
       "id": "g1_l037",
@@ -332,7 +404,9 @@
       "blockId": "b15",
       "sourceTopic": 15,
       "topic": "Плоские и объёмные фигуры",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 9,
+      "points": 50
     },
     {
       "id": "g1_l038",
@@ -341,7 +415,9 @@
       "blockId": "b16",
       "sourceTopic": 16,
       "topic": "Задачи на сложение в пределах 20",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 50
     },
     {
       "id": "g1_l039",
@@ -350,7 +426,9 @@
       "blockId": "b16",
       "sourceTopic": 16,
       "topic": "Задачи на сложение в пределах 20",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 50
     },
     {
       "id": "g1_l040",
@@ -359,7 +437,9 @@
       "blockId": "b17",
       "sourceTopic": 17,
       "topic": "Задачи на вычитание",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 50
     },
     {
       "id": "g1_l041",
@@ -368,7 +448,9 @@
       "blockId": "b17",
       "sourceTopic": 17,
       "topic": "Задачи на вычитание",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 50
     },
     {
       "id": "g1_l042",
@@ -377,7 +459,9 @@
       "blockId": "b18",
       "sourceTopic": 18,
       "topic": "Сложение и вычитание по сюжетным изображениям",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 48
     },
     {
       "id": "g1_l043",
@@ -386,7 +470,9 @@
       "blockId": "b18",
       "sourceTopic": 18,
       "topic": "Сложение и вычитание по сюжетным изображениям",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 52
     },
     {
       "id": "g1_l044",
@@ -395,7 +481,9 @@
       "blockId": "b19",
       "sourceTopic": 19,
       "topic": "Отрезок и его длина",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 100
     },
     {
       "id": "g1_l045",
@@ -404,7 +492,9 @@
       "blockId": "b20",
       "sourceTopic": 20,
       "topic": "На сколько больше и на сколько меньше",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 33
     },
     {
       "id": "g1_l046",
@@ -413,7 +503,9 @@
       "blockId": "b20",
       "sourceTopic": 20,
       "topic": "На сколько больше и на сколько меньше",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 35
     },
     {
       "id": "g1_l047",
@@ -422,7 +514,9 @@
       "blockId": "b20",
       "sourceTopic": 20,
       "topic": "На сколько больше и на сколько меньше",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 32
     },
     {
       "id": "g1_l048",
@@ -431,7 +525,9 @@
       "blockId": "b21",
       "sourceTopic": 21,
       "topic": "Неизвестные компоненты сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 36
     },
     {
       "id": "g1_l049",
@@ -440,7 +536,9 @@
       "blockId": "b21",
       "sourceTopic": 21,
       "topic": "Неизвестные компоненты сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 32
     },
     {
       "id": "g1_l050",
@@ -449,7 +547,9 @@
       "blockId": "b21",
       "sourceTopic": 21,
       "topic": "Неизвестные компоненты сложения и вычитания",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 32
     },
     {
       "id": "g1_l051",
@@ -458,7 +558,9 @@
       "blockId": "b22",
       "sourceTopic": 22,
       "topic": "Чтение таблиц и пиктограмм",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 34
     },
     {
       "id": "g1_l052",
@@ -467,7 +569,9 @@
       "blockId": "b22",
       "sourceTopic": 22,
       "topic": "Чтение таблиц и пиктограмм",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 33
     },
     {
       "id": "g1_l053",
@@ -476,7 +580,9 @@
       "blockId": "b22",
       "sourceTopic": 22,
       "topic": "Чтение таблиц и пиктограмм",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 33
     },
     {
       "id": "g1_l054",
@@ -485,7 +591,9 @@
       "blockId": "b23",
       "sourceTopic": 23,
       "topic": "Представление данных: описание, список, таблица",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 34
     },
     {
       "id": "g1_l055",
@@ -494,7 +602,9 @@
       "blockId": "b23",
       "sourceTopic": 23,
       "topic": "Представление данных: описание, список, таблица",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 33
     },
     {
       "id": "g1_l056",
@@ -503,7 +613,9 @@
       "blockId": "b23",
       "sourceTopic": 23,
       "topic": "Представление данных: описание, список, таблица",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 33
     },
     {
       "id": "g1_l057",
@@ -512,7 +624,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 11
     },
     {
       "id": "g1_l058",
@@ -521,7 +635,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 10
     },
     {
       "id": "g1_l059",
@@ -530,7 +646,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 20,
+      "points": 12
     },
     {
       "id": "g1_l060",
@@ -539,7 +657,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 11
     },
     {
       "id": "g1_l061",
@@ -548,7 +668,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 13,
+      "points": 8
     },
     {
       "id": "g1_l062",
@@ -557,7 +679,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 10
     },
     {
       "id": "g1_l063",
@@ -566,7 +690,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 10
     },
     {
       "id": "g1_l064",
@@ -575,7 +701,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 11
     },
     {
       "id": "g1_l065",
@@ -584,7 +712,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 11
     },
     {
       "id": "g1_l066",
@@ -593,7 +723,9 @@
       "blockId": "b24",
       "sourceTopic": 24,
       "topic": "Величины, единицы, время, цена и стоимость",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 10,
+      "points": 6
     },
     {
       "id": "g1_l067",
@@ -602,7 +734,9 @@
       "blockId": "b25",
       "sourceTopic": 25,
       "topic": "Ломаная линия из отрезков",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 100
     },
     {
       "id": "g1_l068",
@@ -611,7 +745,9 @@
       "blockId": "b26",
       "sourceTopic": 26,
       "topic": "Числовые выражения и сравнение",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 32
     },
     {
       "id": "g1_l069",
@@ -620,7 +756,9 @@
       "blockId": "b26",
       "sourceTopic": 26,
       "topic": "Числовые выражения и сравнение",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 34
     },
     {
       "id": "g1_l070",
@@ -629,7 +767,9 @@
       "blockId": "b26",
       "sourceTopic": 26,
       "topic": "Числовые выражения и сравнение",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 34
     },
     {
       "id": "g1_l071",
@@ -638,7 +778,9 @@
       "blockId": "b27",
       "sourceTopic": 27,
       "topic": "Создание и решение ситуационных задач",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 56
     },
     {
       "id": "g1_l072",
@@ -647,7 +789,9 @@
       "blockId": "b27",
       "sourceTopic": 27,
       "topic": "Создание и решение ситуационных задач",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 12,
+      "points": 44
     },
     {
       "id": "g1_l073",
@@ -656,7 +800,9 @@
       "blockId": "b28",
       "sourceTopic": 28,
       "topic": "Обратные задачи",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 50
     },
     {
       "id": "g1_l074",
@@ -665,7 +811,9 @@
       "blockId": "b28",
       "sourceTopic": 28,
       "topic": "Обратные задачи",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 15,
+      "points": 50
     },
     {
       "id": "g1_l075",
@@ -674,7 +822,9 @@
       "blockId": "b29",
       "sourceTopic": 29,
       "topic": "Разделение целого на половины",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 13,
+      "points": 100
     },
     {
       "id": "g1_l076",
@@ -683,7 +833,9 @@
       "blockId": "b30",
       "sourceTopic": 30,
       "topic": "Равные и неравные части; восстановление целого",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 13,
+      "points": 25
     },
     {
       "id": "g1_l077",
@@ -692,7 +844,9 @@
       "blockId": "b30",
       "sourceTopic": 30,
       "topic": "Равные и неравные части; восстановление целого",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 33
     },
     {
       "id": "g1_l078",
@@ -701,7 +855,9 @@
       "blockId": "b30",
       "sourceTopic": 30,
       "topic": "Равные и неравные части; восстановление целого",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 11,
+      "points": 21
     },
     {
       "id": "g1_l079",
@@ -710,7 +866,9 @@
       "blockId": "b30",
       "sourceTopic": 30,
       "topic": "Равные и неравные части; восстановление целого",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 11,
+      "points": 21
     },
     {
       "id": "g1_l080",
@@ -719,7 +877,9 @@
       "blockId": "b31",
       "sourceTopic": 31,
       "topic": "Поворот и положение фигур",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 50
     },
     {
       "id": "g1_l081",
@@ -728,7 +888,9 @@
       "blockId": "b31",
       "sourceTopic": 31,
       "topic": "Поворот и положение фигур",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 16,
+      "points": 50
     },
     {
       "id": "g1_l082",
@@ -737,7 +899,9 @@
       "blockId": "b32",
       "sourceTopic": 32,
       "topic": "Термометр",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 17,
+      "points": 100
     },
     {
       "id": "g1_l083",
@@ -746,7 +910,9 @@
       "blockId": "b33",
       "sourceTopic": 33,
       "topic": "Диаграммы Кэрролла и Венна",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 14,
+      "points": 34
     },
     {
       "id": "g1_l084",
@@ -755,7 +921,9 @@
       "blockId": "b33",
       "sourceTopic": 33,
       "topic": "Диаграммы Кэрролла и Венна",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 14,
+      "points": 33
     },
     {
       "id": "g1_l085",
@@ -764,7 +932,9 @@
       "blockId": "b33",
       "sourceTopic": 33,
       "topic": "Диаграммы Кэрролла и Венна",
-      "duration": 35
+      "duration": 35,
+      "difficulty": 14,
+      "points": 33
     }
   ]
 }

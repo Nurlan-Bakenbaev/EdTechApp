@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Icon } from "@/components/icon";
 import { t, useLanguage, useProgress } from "@/app/providers";
 import { activeLessonSlots, lessonHref } from "@/lib/course-navigation";
+import { totalLessonPoints } from "@/lib/lesson-points";
 import { getCurrentStudyStreak, getRussianDayUnit } from "@/lib/study-streak";
 import { LessonSeaPath } from "@/components/lesson-sea-path";
 
@@ -46,7 +47,7 @@ export function DashboardPage() {
           <aside className="progress-summary">
             <div className="summary-header"><span className="summary-icon"><Icon name="trophy" size={22}/></span><div><strong>{t(language, "Мой прогресс", "Менин жетишкендигим")}</strong><span>{t(language, "Сохраняется на устройстве", "Түзмөктө сакталат")}</span></div></div>
             <div className="progress-ring" style={{ "--progress": `${completedPercent * 3.6}deg` } as React.CSSProperties}><div><strong>{completedPercent}%</strong><span>{t(language, "курса", "курстун")}</span></div></div>
-            <div className="summary-stats"><div><strong>{activeCompleted}</strong><span>{t(language, "уроков готово", "сабак бүттү")}</span></div><div><strong>{progress.xp}</strong><span>XP</span></div><div><strong>{progress.completed.length * 3}</strong><span>{t(language, "звёзд", "жылдыз")}</span></div></div>
+            <div className="summary-stats"><div><strong>{activeCompleted}</strong><span>{t(language, "уроков готово", "сабак бүттү")}</span></div><div><strong>{totalLessonPoints(progress.completed)}</strong><span>{t(language, "баллов за темы", "темалар үчүн упай")}</span></div><div><strong>{progress.xp}</strong><span>XP</span></div><div><strong>{progress.completed.length * 3}</strong><span>{t(language, "звёзд", "жылдыз")}</span></div></div>
           </aside>
         </div>
 

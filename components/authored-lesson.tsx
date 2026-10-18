@@ -8,6 +8,7 @@ import { LessonVideoPlayer } from "@/components/LessonVideoPlayer";
 import { LessonRewards } from "@/components/LessonRewards";
 import type { AuthoredLesson, AuthoredProgress, TaskProgress } from "@/lib/authored-types";
 import { lessonFruitForId, replaceCounterNouns } from "@/lib/lesson-fruit";
+import { formatLessonPoints, lessonPointsForId, lessonTopicIdForId, topicPointTotals, totalLessonPoints } from "@/lib/lesson-points";
 
 const empty: AuthoredProgress = { tab: "lesson", taskIndex: 0, tasks: {}, steps: [], homeworkDone: [], adultConfirmed: false, videoPosition: 0, videoSeen: false };
 const emptyTask: TaskProgress = { work: {}, hints: 0 };
@@ -65,6 +66,10 @@ export function AuthoredLessonPage({ lesson }: { lesson: AuthoredLesson }) {
   const completeLesson = profile.completeLesson;
   const setLastLesson = profile.setLastLesson;
   const lessonFruit = lessonFruitForId(lesson.id);
+  const lessonPoints = lessonPointsForId(lesson.id);
+  const topicId = lessonTopicIdForId(lesson.id);
+  const topicPoints = topicId ? topicPointTotals(profile.completed)[topicId] ?? 0 : 0;
+  const earnedPoints = totalLessonPoints(profile.completed);
   useEffect(() => {
     if (!profile.ready || completedOnEntry !== null) return;
     const timer = window.setTimeout(() => setCompletedOnEntry(profile.isComplete(lesson.id)), 0);
@@ -72,10 +77,10 @@ export function AuthoredLessonPage({ lesson }: { lesson: AuthoredLesson }) {
   }, [profile, completedOnEntry, lesson.id]);
   useEffect(() => { if (profile.ready) setLastLesson(lesson.id); }, [profile.ready, setLastLesson, lesson.id]);
   useEffect(() => {
-    if (!ready || !profile.ready || awarded.current || totalAssessmentTasks === 0 || attempted !== totalAssessmentTasks) return;
+    if (!ready || !profile.ready || completedOnEntry === null || awarded.current || totalAssessmentTasks === 0 || attempted !== totalAssessmentTasks) return;
     awarded.current = true;
-    completeLesson(lesson.id);
-  }, [ready, profile.ready, attempted, totalAssessmentTasks, lesson.id, completeLesson]);
+    completeLesson(lesson.id, lessonPoints);
+  }, [ready, profile.ready, completedOnEntry, attempted, totalAssessmentTasks, lesson.id, lessonPoints, completeLesson]);
   function taskChange(id: string, progress: TaskProgress) { setState((current) => ({ ...current, tasks: { ...current.tasks, [id]: progress } })); }
   const assessmentTask = lesson.assessment[state.taskIndex];
   const pdf = `/api/homework/${lesson.id}`;
@@ -83,6 +88,12 @@ export function AuthoredLessonPage({ lesson }: { lesson: AuthoredLesson }) {
   return <div className={`page-surface authored-course ${largeText ? "large-text" : ""}`} lang="ru"><div className="shell">
     <div className="authored-topline"><Link href="/grades/1">← Все уроки</Link><span>1 класс · Урок {lesson.order} из 85</span><button type="button" className="hint-button" aria-pressed={largeText} onClick={() => setLargeText(!largeText)}>Аа {largeText ? "Обычный текст" : "Крупнее"}</button></div>
     <header className="authored-header"><span className="kicker">Мастерская открытий</span><h1>{lesson.title}</h1><p>{lesson.topic}</p></header>
+    <section className="lesson-topic-points" aria-label="Награда и баллы по теме">
+      <div><span>Награда за первое прохождение</span><strong>⭐ +{formatLessonPoints(lessonPoints)}</strong></div>
+      <div><span>Баллы за тему</span><strong>{topicPoints}/100</strong></div>
+      <div className="lesson-topic-points-track" role="progressbar" aria-label="Баллы за тему" aria-valuemin={0} aria-valuemax={100} aria-valuenow={topicPoints}><span style={{ width: `${topicPoints}%` }} /></div>
+      <small>Сложные уроки дают больше баллов. За каждую тему можно получить не больше 100.</small>
+    </section>
     <nav className="authored-tabs" aria-label="Разделы урока">{([['lesson','Урок'],['test',`Тест · ${taskCountLabel(totalAssessmentTasks)}`],['homework','Д/З']] as const).map(([tab,label]) => <button key={tab} type="button" aria-current={state.tab === tab ? "page" : undefined} onClick={() => setState((current) => ({ ...current, tab }))}>{label}</button>)}</nav>
     {storageError && <p role="status">Браузер не разрешил сохранить прогресс. Задания доступны, но после закрытия страницы результаты могут пропасть.</p>}
     {!ready ? <p role="status">Открываем урок…</p> : <div className="authored-content">
@@ -102,7 +113,7 @@ export function AuthoredLessonPage({ lesson }: { lesson: AuthoredLesson }) {
         <nav className="authored-task-nav" aria-label="Задания теста">{lesson.assessment.map((task, index) => <button type="button" key={task.id} aria-label={`Задание ${index + 1}${state.tasks[task.id]?.first ? ", есть ответ" : ""}`} aria-current={state.taskIndex === index ? "step" : undefined} className={state.tasks[task.id]?.latest?.correct ? "answered" : ""} onClick={() => setState((current) => ({ ...current, taskIndex: index }))}>{index + 1}</button>)}</nav>
         <AuthoredTaskView key={assessmentTask.id} task={assessmentTask} progress={state.tasks[assessmentTask.id] ?? emptyTask} onChange={(value) => taskChange(assessmentTask.id, value)} />
         <div className="authored-actions"><button className="button button-ghost" type="button" disabled={state.taskIndex === 0} onClick={() => setState((current) => ({ ...current, taskIndex: current.taskIndex - 1 }))}>← Назад</button><button className="button button-primary" type="button" disabled={state.taskIndex >= totalAssessmentTasks - 1} onClick={() => setState((current) => ({ ...current, taskIndex: current.taskIndex + 1 }))}>Дальше →</button></div>
-        {attempted === totalAssessmentTasks && <section className="authored-result" role="status"><span aria-hidden="true">★</span><h2>Ты попробовал все задания!</h2><p>Самостоятельно с первой попытки: {independent} из {totalAssessmentTasks}. Сейчас решено: {solved} из {totalAssessmentTasks}.</p><p>{independent >= masteryThreshold ? "Отличная работа! Прогресс сохранён: 3 звезды и 60 XP за первое прохождение." : "Урок завершён — награда сохранена. Если захочешь, можно вернуться к заданиям и потренироваться ещё."}</p>{completedOnEntry !== null && <LessonRewards alreadyComplete={completedOnEntry} />}<p>{lesson.reflection.question}</p><div className="authored-choice-row">{lesson.reflection.options.map((option) => <button type="button" key={option} aria-pressed={state.reflection === option} onClick={() => setState((current) => ({ ...current, reflection: option }))}>{option}</button>)}</div></section>}
+        {attempted === totalAssessmentTasks && <section className="authored-result" role="status"><span aria-hidden="true">★</span><h2>Ты попробовал все задания!</h2><p>Самостоятельно с первой попытки: {independent} из {totalAssessmentTasks}. Сейчас решено: {solved} из {totalAssessmentTasks}.</p><p>{independent >= masteryThreshold ? "Отличная работа! Награда зависит от сложности урока." : "Урок завершён — награда сохранена. Если захочешь, можно вернуться к заданиям и потренироваться ещё."}</p>{completedOnEntry !== null && <LessonRewards alreadyComplete={completedOnEntry} lessonPoints={lessonPoints} topicPoints={topicPoints} totalLessonPoints={earnedPoints} />}<p>{lesson.reflection.question}</p><div className="authored-choice-row">{lesson.reflection.options.map((option) => <button type="button" key={option} aria-pressed={state.reflection === option} onClick={() => setState((current) => ({ ...current, reflection: option }))}>{option}</button>)}</div></section>}
       </>}
       {state.tab === "homework" && <>
         <section className="authored-homework-header"><h2>Тренируемся дома</h2><p>{replaceCounterNouns(lesson.parentNote, lessonFruit)}</p><div className="authored-actions"><a className="button button-primary" href={`${pdf}?download=1`}>↓ Сохранить PDF</a><a className="button button-ghost" href={pdf} target="_blank" rel="noreferrer">Открыть для печати ↗</a></div><p className="authored-note">Печатайте в масштабе 100%. Ответы находятся в отдельном разделе для взрослых.</p></section>

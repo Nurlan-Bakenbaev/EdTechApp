@@ -70,7 +70,7 @@ function parseLessonCheckpoints(value: unknown): Record<string, LessonCheckpoint
 
 interface ProgressContextValue extends ProgressState {
   ready: boolean;
-  completeLesson: (lessonId: string) => void;
+  completeLesson: (lessonId: string, points?: number) => void;
   setLastLesson: (lessonId: string) => void;
   getLessonCheckpoint: (lessonId: string) => LessonCheckpoint | undefined;
   saveLessonCheckpoint: (lessonId: string, checkpoint: LessonCheckpoint) => void;
@@ -140,7 +140,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
     setLanguage(language === "ru" ? "ky" : "ru");
   }, [language, setLanguage]);
 
-  const completeLesson = useCallback((lessonId: string) => {
+  const completeLesson = useCallback((lessonId: string, points = 60) => {
     setProgress((current) => {
       const now = new Date();
       const today = getLocalDateKey(now);
@@ -151,7 +151,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
       return {
         completed: [...current.completed, lessonId],
         lastLesson: lessonId,
-        xp: current.xp + 60,
+        xp: current.xp + points,
         studyStreak,
         lastStudyDate: today,
         lessonCheckpoints: current.lessonCheckpoints,

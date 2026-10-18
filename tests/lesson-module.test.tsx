@@ -14,6 +14,7 @@ import { MathModelView } from "@/components/math-model";
 import { AuthoredTaskView } from "@/components/authored-task";
 import { uniqueAssessmentTasks } from "@/lib/authored-assessment";
 import { lessonMascotForId } from "@/lib/lesson-mascot";
+import { lessonPointsForId } from "@/lib/lesson-points";
 import type { AuthoredLesson } from "@/lib/authored-types";
 import type { AuthoredTask } from "@/lib/authored-types";
 import { getLessonSlot } from "@/lib/curriculum";
@@ -74,6 +75,7 @@ async function render(children: React.ReactNode) {
 
 beforeEach(() => {
   Object.assign(globalThis, { IS_REACT_ACT_ENVIRONMENT: true });
+  Object.defineProperty(window, "matchMedia", { configurable: true, value: vi.fn().mockReturnValue({ matches: true }) });
   localStorage.clear();
   container = document.createElement("div"); document.body.append(container); root = createRoot(container);
 });
@@ -253,6 +255,36 @@ describe("lesson module", () => {
     await click("Complete"); await click("Complete");
     const saved = JSON.parse(localStorage.getItem("bilim-progress")!);
     expect(saved.xp).toBe(60); expect(saved.completed).toEqual(["g1-t02-h1"]);
+  });
+
+  it("awards the lesson-specific point value only once", async () => {
+    function Probe() { const progress = useProgress(); return <button onClick={() => progress.completeLesson("g1_l001", 13)}>Complete {progress.xp}</button>; }
+    await render(<Probe />);
+    await click("Complete"); await click("Complete");
+    const saved = JSON.parse(localStorage.getItem("bilim-progress")!);
+    expect(saved.xp).toBe(13);
+    expect(saved.completed).toEqual(["g1_l001"]);
+  });
+
+  it("awards the authored lesson points after every test question is attempted", async () => {
+    const tasks = Object.fromEntries(authoredLessonFixture.assessment.map((item) => [item.id, {
+      work: {},
+      hints: 0,
+      first: { id: `${item.id}-attempt`, correct: false, hints: 0, assisted: false, work: {} },
+    }]));
+    localStorage.setItem(`${authoredLessonFixture.courseId}:${authoredLessonFixture.id}:local`, JSON.stringify({
+      tab: "test", taskIndex: 0, tasks, steps: [], homeworkDone: [], adultConfirmed: false, videoPosition: 0, videoSeen: false,
+    }));
+
+    await render(<AuthoredLessonPage lesson={authoredLessonFixture} />);
+    await act(async () => { await new Promise((resolve) => setTimeout(resolve, 40)); });
+
+    const saved = JSON.parse(localStorage.getItem("bilim-progress")!);
+    const expectedPoints = lessonPointsForId(authoredLessonFixture.id);
+    expect(saved.completed).toContain(authoredLessonFixture.id);
+    expect(saved.xp).toBe(expectedPoints);
+    expect(container.querySelector(".lesson-rewards")?.textContent).toContain(`+${expectedPoints} баллов`);
+    expect(container.querySelector(".lesson-rewards")?.textContent).toContain(`${expectedPoints}/100 баллов`);
   });
 
   it("keeps the authored adventure open and records a completed step", async () => {
